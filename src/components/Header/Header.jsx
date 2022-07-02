@@ -11,19 +11,21 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
-import { carsContext } from "../../contexts/cars.Context";
-import { TextField } from "@mui/material";
+import { useLocation, useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { cartContext } from "../../contexts/cartContext";
+import { Badge } from "@mui/material";
 
-// const pages = ["All Cars", "Add a Car"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
-  const { getCars } = useContext(carsContext);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const { getCart, count } = React.useContext(cartContext);
+  React.useEffect(() => {
+    getCart();
+  }, []);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -198,9 +200,11 @@ const Header = () => {
             <IconButton
               sx={{ marginRight: "40px" }}
               onClick={() => navigate("/cart")}
-              color="warning"
+              color="success"
               aria-label="add to shopping cart">
-              <AddShoppingCartIcon />
+              <Badge badgeContent={count} color="error">
+                <AddShoppingCartIcon />
+              </Badge>
             </IconButton>
 
             <Tooltip title="Open settings">

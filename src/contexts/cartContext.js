@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useReducer } from "react";
 
 export const cartContext = React.createContext();
 
 const INIT_STATE = {
   cart: null,
+  count: 0,
 };
 
 function reducer(state = INIT_STATE, action) {
@@ -12,6 +13,7 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         cart: action.payload,
+        count: action.payload.cars.length,
       };
     default:
       return state;
@@ -19,6 +21,8 @@ function reducer(state = INIT_STATE, action) {
 }
 
 const CartContextProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, INIT_STATE);
+
   function addToCart(car) {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {
@@ -32,12 +36,70 @@ const CartContextProvider = ({ children }) => {
       count: 1,
       subPrice: car.price,
     };
-    cart.cars.push(newCar);
+
+    const isCarInCart = cart.cars.some(item => item.item.id === newCar.item.id);
+
+    if (isCarInCart) {
+      cart.cars = cart.cars.filter(item => item.item.id !== newCar.item.id);
+    } else {
+      cart.cars.push(newCar);
+    }
     localStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
+  }
+
+  function getCart() {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (!cart) {
+      cart = {
+        cars: [],
+        totalPrice: 0,
+      };
+    }
+    dispatch({
+      type: "GET_CART",
+      payload: cart,
+    });
+  }
+
+  function deleteFromCart(id) {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (!cart) {
+      cart = {
+        cars: [],
+        totalPrice: 0,
+      };
+    }
+    cart.cars = cart.cars.filter(item => item.item.id !== id);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
+  }
+
+  function changeCount(count, id) {
+    if (count <= 0) {
+      return;
+    }
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart.cars = cart.cars.map(item => {
+      if (item.item.id === id) {
+        item.count = count;
+      }
+      return item;
+    });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
   }
 
   return (
-    <cartContext.Provider value={{ addToCart }}>
+    <cartContext.Provider
+      value={{
+        cart: state.cart,
+        count: state.count,
+        addToCart,
+        getCart,
+        deleteFromCart,
+        changeCount,
+      }}>
       {children}
     </cartContext.Provider>
   );

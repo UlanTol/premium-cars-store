@@ -21,10 +21,7 @@ const Details = () => {
   return oneCar ? (
     <Container
       sx={{
-        // display: "flex",
-        // flexWrap: "wrap",
         flexDirection: "column",
-        // alignItems: "center",
       }}>
       <Box>
         <Typography variant="h4" marginTop="20px">
