@@ -1,0 +1,18 @@
+.main1 {
+  background-image: url("../assets/1.jpg");
+  background-size: cover;
+  color: black;
+}
+.main2 {
+  background-image: url("../assets/2.jpg");
+  background-size: cover;
+}
+.main3 {
+  background-image: url("../assets/3.jpg");
+  background-size: cover;
+}
+.main4 {
+  background-image: url("../assets/4.jpg");
+  /* background-color: black; */
+  background-size: 100% 100%;
+}
