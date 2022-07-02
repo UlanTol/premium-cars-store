@@ -49,21 +49,18 @@ export default function ElevateAppBar(props) {
                 <span></span>
 
                 <ul id="menu">
-                  <a href="#">
-                    <li>Home</li>
+                  <a href="/cars">
+                    <li>Choose your Car</li>
                   </a>
-                  <a href="#">
-                    <li>iStore</li>
+                  <a href="/add">
+                    <li>Add a Car</li>
                   </a>
-                  <a href="#">
+                  <a href="/about">
                     <li>About Us</li>
                   </a>
                   <a href="#">
                     <li>Contact</li>
                   </a>
-                  {/* <a href="https://erikterwan.com/" target="_blank">
-                    <li>Show me more</li>
-                  </a> */}
                 </ul>
               </div>
             </nav>
@@ -79,10 +76,10 @@ export default function ElevateAppBar(props) {
             <Box>
               <ShoppingCartIcon style={{ margin: "5px 0px 0px 5px" }} />
               <Typography
-                onClick={() => navigate("/cars")}
+                onClick={() => navigate("/cart")}
                 variant="h5"
                 component="div">
-                Shop
+                Cart
               </Typography>
             </Box>
           </Toolbar>
