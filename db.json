@@ -1,0 +1,123 @@
+{
+  "cars": [
+    {
+      "title": "Ferrari LaFerrari",
+      "price": "90000",
+      "description": "One-off vehicles like the Pininfarina Sergio or the limited edition LaFerrari (pictured) are only offered to the most loyal of Ferrari customers",
+      "image": "https://www.esotericdetail.com/wp-content/uploads/2021/06/ferrari-laferrari-paint-protection-film-esoteric-detail-1080x675.jpg",
+      "id": 3
+    },
+    {
+      "title": "Bentley Continental GT",
+      "price": "100500",
+      "description": "Bentley Continental GT Mulliner Coupe Debuts As Luxurious Grand Tourer. There are double diamond styling elements throughout the exterior and cabin.",
+      "image": "https://cdn.motor1.com/images/mgl/wV2RV/s1/bentley-continental-gt-mulliner-coupe.jpg",
+      "id": 10
+    },
+    {
+      "title": "Mercedes-Maybach S-Class",
+      "price": "200000",
+      "description": "Excellent comfort and ultimate luxury – especially in the rear – are the top-most priority. Innovative details and exquisite materials make the Mercedes‑Maybach S‑Class a refuge that offers the brand’s hallmark experience of luxury.",
+      "image": "https://assets.gq.ru/photos/5fb66ae9894991f692ed30f6/16:9/w_2560%2Cc_limit/20C0654_001.jpg",
+      "id": 1
+    },
+    {
+      "title": "FERRARI 488 SPIDER",
+      "price": "200000",
+      "description": "The result is the most powerful and innovative Ferrari Spider ever built, a car that marries the extraordinary prowess of the 488 GTB coupé’s mid-rear V8 with the joy of tackling even the most challenging roads surrounded by nature’s heady aromas and colours and accompanied by an inimitable Ferrari engine soundtrack. At the very heart of the car is, of course, the 3902cc turbo-charged V8 which set a new benchmark for this type of architecture. Thanks to a maximum power output of 670 CV and smooth, progressive torque delivery in the higher gears by the Variable Torque Management system, the 488 Spider sprints from 0 to 100 km/h in 3 seconds flat and from 0 to 200 km/h in 8.7 seconds.",
+      "image": "https://65e81151f52e248c552b-fe74cd567ea2f1228f846834bd67571e.ssl.cf1.rackcdn.com/Ferrari/Model%20Pages/488%20Spider/ferrari-488-spider-red-driving.jpg",
+      "id": 4
+    },
+    {
+      "title": "Lamborghini Huracan",
+      "price": "150000",
+      "description": "Designed to cut through the air and become one with the sky, the Huracán Spyder is the pinnacle of Italian taste and hand craftsmanship, a sports car concept elevated to the performance and sensation of a coupé.  The result? Behind you, the roar of the powerful V-10 engine. Above your head, an ultra-lightweight soft top that opens in just 17 seconds. Ahead, only the horizon awaits. Discover the unique characteristics and detailed technical specifications of the Huracán Spyder below.",
+      "image": "https://www.lambocars.com/wp-content/uploads/2019/02/2019_huracan_evo_spyder_1.jpg",
+      "id": 5
+    },
+    {
+      "title": "Lamborghini Urus",
+      "price": "380000",
+      "description": "Lamborghini Urus is the first Super Sport Utility Vehicle in the world to merge the soul of a super sports car with the functionality of an SUV. Powered by a 4.0-liter twin-turbo V8 engine producing 650 CV and 850 Nm of torque, Urus accelerates from 0 to 62 mph in 3.6 seconds and reaches a top speed of 190 mph. The design, performance, driving dynamics and driving emotion flow effortlessly into this visionary approach to Lamborghini DNA.",
+      "image": "https://dvizhok.su/assets/images/resources/21922/urus-azerbaijan.jpg",
+      "id": 6
+    },
+    {
+      "title": "Lamborghini Huracán Coupe",
+      "price": "250000",
+      "description": "The Huracán Coupé has been created for unprecedented performance. All the power and acceleration of a naturally aspirated V-10 engine, without giving up control or fun of driving. This is all thanks to the  all-wheel drive system and the 7-speed Lamborghini Doppia Frizione (LDF) dual-clutch transmission, as well as the innovative Piattaforma Inerziale Lamborghini (LPI), created for accurate and real-time detection of all the chassis movements and for immediate adjustment of the car setup. Below is a summary of all the characteristics and the technical specifications of the Huracán Coupé.",
+      "image": "https://i.pinimg.com/originals/53/bc/0f/53bc0fcd373de7dabd98b8638dd42b59.jpg",
+      "id": 7
+    },
+    {
+      "title": "Mercedes-Benz Vision Avtr",
+      "price": "99000",
+      "description": "The name of the groundbreaking concept vehicle stands not only for the close collaboration in developing the show car together with the AVATAR team but also for ADVANCED VEHICLE TRANSFORMATION. This concept vehicle embodies the vision of Mercedes-Benz designers, engineers and trend researchers for mobility in the distant future. ",
+      "image": "https://cdnn1.inosmi.ru/img/24660/23/246602311_0:167:2000:1217_1240x0_80_0_0_f13993172e6e9aaead9713b14695624c.jpg",
+      "id": 8
+    },
+    {
+      "title": "Bugatti Chiron 2022",
+      "price": "187000",
+      "description": "The CHIRON is the fastest, most powerful, and exclusive production super sports car in BUGATTI’s history. Its sophisticated design, innovative technology, and iconic, performance-oriented form make it a unique masterpiece of art, form and technique, that pushes boundaries beyond imagination.  BUGATTI owes its distinctive character to a family of artists and engineers, and has always strived to offer the extraordinary, the unrivaled, the best. Every element of the CHIRON is a combination of reminiscence to its history and the most innovative technology. The result is a unique creation of enduring value, and breathtaking automotive accomplishment.",
+      "image": "https://www.wheels97.com/tr:w-1200,dpr-1/images/car-exterior-images/bugatti/bugatti-chiron/front-left-side_EpQrl9xwc.jpg",
+      "id": 9
+    },
+    {
+      "title": "Mercedes-Maybach 6 Cabriolet",
+      "price": "99990",
+      "description": "mercedes-benz-gls-x167-brandhub-brandpage-vision-gallery-01-1400x1880-11-2019 Vision Mercedes-Maybach 6 Cabriolet. There is no more up-to-date or luxurious way of embodying our design idiom: breathtaking proportions and a luxurious haute-couture interior make the Vision 6 Cabriolet the ultimate experience.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg/1200px-Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg",
+      "id": 2
+    },
+    {
+      "title": "BMW 3.0 CSL Hommage",
+      "price": 89000,
+      "description": "Racing flair with a touch of class",
+      "image": "https://moneyinc.com/wp-content/uploads/2019/05/The-BMW-3.0-CSL-Hommage-Concept.jpg",
+      "id": 11
+    },
+    {
+      "title": "BMW M5",
+      "price": 79000,
+      "description": "Now's your last chance to win 'the most hardcore and expensive M5'",
+      "image": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2022/03/14141334/164670880621116793_79c85105-dbf4.jpeg",
+      "id": 12
+    },
+    {
+      "title": "BMW iX Flow",
+      "price": "85000",
+      "description": "BMW's colour-changing car showcased at CES 2022 ",
+      "image": "https://cdni.autocarindia.com/ExtraImages/20220106011433_BMW_ix_colour_change_1.jpg",
+      "id": 13
+    },
+    {
+      "title": "Bugatti Divo",
+      "price": 98999,
+      "description": "The Divo is BUGATTI’s first coachbuilt hyper sports car of the 21st century. The limited and extremely high-performance hyper sports car is an absolute must-have for any BUGATTI enthusiast’s hyper sports car collection. With its futuristic and ferocious design and its completely different personality and driving performance, BUGATTI has created a true masterpiece of automotive craftsmanship that successfully revives BUGATTI’s long-standing coachbuilding tradition.",
+      "image": "https://pbs.twimg.com/media/EaUR5A9WsAAdH9u.jpg",
+      "id": 14
+    },
+    {
+      "title": "Bigatti Veyron",
+      "price": 78900,
+      "description": "The Bugatti Veyron EB 16.4 is a mid-engine sports car, designed and developed in France by the Volkswagen Group and Bugatti and manufactured in Molsheim",
+      "image": "https://первыйрай.рф/wp-content/uploads/bugatti-veyron.jpg",
+      "id": 15
+    },
+    {
+      "title": "Bugatti Vision GT",
+      "price": 89988,
+      "description": "The Bugatti Vision Gran Turismo is a single-seater concept car developed by Bugatti and was manufactured in Molsheim, Alsace, France.",
+      "image": "https://www.gtopcars.com/wp-content/uploads/2020/02/2020-Bugatti-Vision-GT.jpg",
+      "id": 16
+    },
+    {
+      "title": "Bugatti Centodieci",
+      "price": 88888,
+      "description": "The Bugatti Centodieci (Italian for \"110\") is a limited production mid-engine sports car produced by French automotive manufacturer Bugatti.",
+      "image": "https://wheelz.me/wp-content/uploads/2022/06/06-BUGATTI_Centodieci-first-delivery.jpg",
+      "id": 17
+    }
+  ]
+}
