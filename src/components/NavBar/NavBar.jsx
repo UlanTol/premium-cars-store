@@ -11,6 +11,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Container from "@mui/material/Container";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
+import { useAuth0 } from "@auth0/auth0-react";
+import Profile from "../Profile/Profile";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -33,6 +35,8 @@ ElevationScroll.propTypes = {
 };
 
 export default function ElevateAppBar(props) {
+  const { loginWithRedirect, logout, user, isLoading } = useAuth0();
+
   const navigate = useNavigate();
   return (
     <React.Fragment>
@@ -49,9 +53,30 @@ export default function ElevateAppBar(props) {
                 <span></span>
 
                 <ul id="menu">
-                  <Link to="/login">
-                    <li>Log In</li>
-                  </Link>
+                  {!isLoading && !user && (
+                    <li
+                      style={{ color: "green" }}
+                      onClick={() => {
+                        loginWithRedirect();
+                        navigate("/cars");
+                      }}>
+                      Shop
+                    </li>
+                  )}
+                  {!isLoading && user && (
+                    <li
+                      style={{ color: "red" }}
+                      onClick={() => {
+                        logout();
+                        navigate("/");
+                      }}>
+                      Log Out
+                    </li>
+                  )}
+                  {/* </Link> */}
+                  <a href="/login">
+                    <li>Profile</li>
+                  </a>
                   <Link to="/">
                     <li>Main</li>
                   </Link>
@@ -68,19 +93,20 @@ export default function ElevateAppBar(props) {
               onClick={() => navigate("/")}
               style={{
                 fontSize: "22px",
-                paddingLeft: "22px",
+                paddingLeft: "2px",
                 color: "white",
                 // marginRight: "60px",
               }}
             />
             <Box>
-              <ShoppingCartIcon style={{ margin: "5px 0px 0px 5px" }} />
+              <ShoppingCartIcon
+                onClick={() => navigate("/cart")}
+                style={{ fontSize: "30px" }}
+              />
               <Typography
                 onClick={() => navigate("/cart")}
-                variant="h5"
-                component="div">
-                Cart
-              </Typography>
+                variant="h1"
+                component="div"></Typography>
             </Box>
           </Toolbar>
         </AppBar>

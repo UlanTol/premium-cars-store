@@ -9,6 +9,7 @@ import { Rings } from "react-loader-spinner";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box } from "@mui/system";
+import Auth0ProviderWithHistory from "./contexts/auth0Provider";
 
 const darkTheme = createTheme({
   palette: {
@@ -27,28 +28,30 @@ const App = () => {
     <CartContextProvider>
       <CarsContextProvider>
         <BrowserRouter>
-          <ThemeProvider theme={darkTheme}>
-            <Navbar />
-            {loading == true ? (
-              <Box
-                style={{
-                  width: "100vw",
-                  height: "100vh",
-                  display: "flex",
-                  marginTop: "30vh",
-                  justifyContent: "center",
-                }}>
-                <Rings
-                  height="200"
-                  width="200"
-                  color="white"
-                  ariaLabel="loading"
-                />
-              </Box>
-            ) : (
-              <Routing />
-            )}
-          </ThemeProvider>
+          <Auth0ProviderWithHistory>
+            <ThemeProvider theme={darkTheme}>
+              <Navbar />
+              {loading == true ? (
+                <Box
+                  style={{
+                    width: "100vw",
+                    height: "100vh",
+                    display: "flex",
+                    marginTop: "30vh",
+                    justifyContent: "center",
+                  }}>
+                  <Rings
+                    height="200"
+                    width="200"
+                    color="white"
+                    ariaLabel="loading"
+                  />
+                </Box>
+              ) : (
+                <Routing />
+              )}
+            </ThemeProvider>
+          </Auth0ProviderWithHistory>
         </BrowserRouter>
       </CarsContextProvider>
     </CartContextProvider>
