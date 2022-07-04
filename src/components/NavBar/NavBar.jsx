@@ -9,7 +9,7 @@ import { SketchOutlined } from "@ant-design/icons";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import Container from "@mui/material/Container";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
 
 function ElevationScroll(props) {
@@ -49,18 +49,18 @@ export default function ElevateAppBar(props) {
                 <span></span>
 
                 <ul id="menu">
-                  <a href="/cars">
-                    <li>Choose your Car</li>
-                  </a>
-                  <a href="/add">
-                    <li>Add a Car</li>
-                  </a>
-                  <a href="/about">
+                  <Link to="/login">
+                    <li>Log In</li>
+                  </Link>
+                  <Link to="/">
+                    <li>Main</li>
+                  </Link>
+                  <Link to="/cars">
+                    <li>Cars</li>
+                  </Link>
+                  <Link to="/about">
                     <li>About Us</li>
-                  </a>
-                  <a href="#">
-                    <li>Contact</li>
-                  </a>
+                  </Link>
                 </ul>
               </div>
             </nav>
