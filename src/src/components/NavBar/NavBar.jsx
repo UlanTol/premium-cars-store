@@ -6,11 +6,13 @@ import Typography from "@mui/material/Typography";
 import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { SketchOutlined } from "@ant-design/icons";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 import Container from "@mui/material/Container";
 import { Navigate, useNavigate } from "react-router-dom";
-import { Box } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
+import { Badge } from "@mui/material";
+import { cartContext } from "../../../contexts/cartContext";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -34,6 +36,11 @@ ElevationScroll.propTypes = {
 
 export default function ElevateAppBar(props) {
   const navigate = useNavigate();
+  const { getCart, count } = React.useContext(cartContext);
+  React.useEffect(() => {
+    getCart();
+  }, []);
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -50,7 +57,7 @@ export default function ElevateAppBar(props) {
 
                 <ul id="menu">
                   <a href="/cars">
-                    <li>Choose your Car</li>
+                    <li>View All Cars</li>
                   </a>
                   <a href="/add">
                     <li>Add a Car</li>
@@ -59,7 +66,7 @@ export default function ElevateAppBar(props) {
                     <li>About Us</li>
                   </a>
                   <a href="#">
-                    <li>Contact</li>
+                    <li>Contact Us</li>
                   </a>
                 </ul>
               </div>
@@ -74,13 +81,14 @@ export default function ElevateAppBar(props) {
               }}
             />
             <Box>
-              <ShoppingCartIcon style={{ margin: "5px 0px 0px 5px" }} />
-              <Typography
+              <IconButton
                 onClick={() => navigate("/cart")}
-                variant="h5"
-                component="div">
-                Cart
-              </Typography>
+                color="success"
+                aria-label="add to shopping cart">
+                <Badge badgeContent={count} color="error">
+                  <AddShoppingCartIcon />
+                </Badge>
+              </IconButton>
             </Box>
           </Toolbar>
         </AppBar>

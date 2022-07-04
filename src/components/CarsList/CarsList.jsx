@@ -24,7 +24,7 @@ const CarsList = () => {
     searchParams.get("_page") ? +searchParams.get("_page") : 1
   );
 
-  const [price, setPrice] = useState([1, 1000000]);
+  const [price, setPrice] = useState([1, 100000000]);
 
   useEffect(() => {
     getCars();
@@ -72,7 +72,7 @@ const CarsList = () => {
             }}
             valueLabelDisplay="auto"
             min={0}
-            max={1000000}
+            max={100000000}
             step={50000}
           />
         </Box>

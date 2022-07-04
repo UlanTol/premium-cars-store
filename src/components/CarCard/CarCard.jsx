@@ -13,8 +13,9 @@ import { cartContext } from "../../contexts/cartContext";
 
 export default function CarCard({ item }) {
   const { deleteCar } = React.useContext(carsContext);
-  const { addToCart } = React.useContext(cartContext);
+  const { addToCart, checkCarInCart } = React.useContext(cartContext);
   const navigate = useNavigate();
+  const [carState, setCarState] = React.useState(checkCarInCart(item.id));
 
   return (
     <Card
@@ -52,8 +53,12 @@ export default function CarCard({ item }) {
           onClick={() => navigate(`/details/${item.id}`)}>
           Details
         </Button>
-        <IconButton onClick={() => addToCart(item)}>
-          <AddShoppingCartIcon color="secondary" />
+        <IconButton
+          onClick={() => {
+            addToCart(item);
+            setCarState(checkCarInCart(item.id));
+          }}>
+          <AddShoppingCartIcon color={carState ? "secondary" : "primary"} />
         </IconButton>
       </CardActions>
     </Card>
