@@ -60,7 +60,7 @@ export default function ElevateAppBar(props) {
                         loginWithRedirect();
                         navigate("/cars");
                       }}>
-                      Shop
+                      Sign In
                     </li>
                   )}
                   {!isLoading && user && (

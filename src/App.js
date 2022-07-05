@@ -10,6 +10,7 @@ import { Rings } from "react-loader-spinner";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box } from "@mui/system";
 import Auth0ProviderWithHistory from "./contexts/auth0Provider";
+import Footer from "./components/Footer/Footer";
 
 const darkTheme = createTheme({
   palette: {
@@ -22,7 +23,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3200);
+    }, 2000);
   });
   return (
     <CartContextProvider>
@@ -50,6 +51,7 @@ const App = () => {
               ) : (
                 <Routing />
               )}
+              <Footer />
             </ThemeProvider>
           </Auth0ProviderWithHistory>
         </BrowserRouter>

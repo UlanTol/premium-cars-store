@@ -1,9 +1,11 @@
 import {
   Box,
   Container,
+  createTheme,
   Pagination,
   Slider,
   TextField,
+  ThemeProvider,
   Typography,
 } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
@@ -43,7 +45,19 @@ const CarsList = () => {
     getCars();
   }, [searchParams]);
 
+  let theme = createTheme({
+    palette: {
+      // primary: {
+      //   main: "white",
+      // },
+      secondary: {
+        main: "#edf2ff",
+      },
+    },
+  });
+
   return (
+    // <ThemeProvider theme={theme}>
     <Container>
       <Box
         component="form"
@@ -56,6 +70,7 @@ const CarsList = () => {
         autoComplete="off">
         <TextField
           value={search}
+          color="secondary"
           onChange={e => setSearch(e.target.value)}
           label="I am Looking for..."
           variant="outlined"
@@ -64,6 +79,7 @@ const CarsList = () => {
         <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
           <Typography>Filter by Price</Typography>
           <Slider
+            style={{ color: "white" }}
             getAriaLabel={() => "Temperature range"}
             color="secondary"
             value={price}
@@ -90,10 +106,11 @@ const CarsList = () => {
           }}
           page={currentPage}
           count={pages}
-          color="secondary"
+          color="primary"
         />
       </Box>
     </Container>
+    // {/* </ThemeProvider> */}
   );
 };
 
