@@ -6,21 +6,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { SketchOutlined } from "@ant-design/icons";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-
 import Container from "@mui/material/Container";
-<<<<<<< HEAD
-
 import { Link, useNavigate } from "react-router-dom";
 import { Box, IconButton } from "@mui/material";
 import { Badge } from "@mui/material";
 import { cartContext } from "../../contexts/cartContext";
 import { useAuth0 } from "@auth0/auth0-react";
-=======
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { Box } from "@mui/material";
-import { useAuth0 } from "@auth0/auth0-react";
-import Profile from "../Profile/Profile";
->>>>>>> 6af3772531ae5904320f5311befdb6d6a9d284dc
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -74,11 +65,7 @@ export default function ElevateAppBar(props) {
                         loginWithRedirect();
                         navigate("/cars");
                       }}>
-<<<<<<< HEAD
                       Shop
-=======
-                      Sign In
->>>>>>> 6af3772531ae5904320f5311befdb6d6a9d284dc
                     </li>
                   )}
                   {!isLoading && user && (
@@ -116,7 +103,7 @@ export default function ElevateAppBar(props) {
                 // marginRight: "60px",
               }}
             />
-<<<<<<< HEAD
+
             <Box sx={{ flexGrow: 0 }}>
               <IconButton
                 onClick={() => navigate("/cart")}
@@ -126,8 +113,8 @@ export default function ElevateAppBar(props) {
                   <AddShoppingCartIcon />
                 </Badge>
               </IconButton>
-=======
-            <Box>
+            </Box>
+            {/* <Box>
               <ShoppingCartIcon
                 onClick={() => navigate("/cart")}
                 style={{ fontSize: "30px" }}
@@ -136,8 +123,7 @@ export default function ElevateAppBar(props) {
                 onClick={() => navigate("/cart")}
                 variant="h1"
                 component="div"></Typography>
->>>>>>> 6af3772531ae5904320f5311befdb6d6a9d284dc
-            </Box>
+            </Box> */}
           </Toolbar>
         </AppBar>
       </ElevationScroll>

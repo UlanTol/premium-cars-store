@@ -24,11 +24,7 @@ function reducer(state = INIT_STATE, action) {
   }
 }
 
-<<<<<<< HEAD
-const CARS_API = " http://localhost:8000/cars";
-=======
-const CARS_API = "http://localhost:8005/cars";
->>>>>>> 6af3772531ae5904320f5311befdb6d6a9d284dc
+const CARS_API = "http://localhost:8000/cars";
 
 const CarsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
