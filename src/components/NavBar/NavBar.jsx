@@ -2,17 +2,18 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { SketchOutlined } from "@ant-design/icons";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 import Container from "@mui/material/Container";
-import { Navigate, useNavigate } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
 import { Box, IconButton } from "@mui/material";
 import { Badge } from "@mui/material";
-import { cartContext } from "../../../contexts/cartContext";
+import { cartContext } from "../../contexts/cartContext";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -35,8 +36,11 @@ ElevationScroll.propTypes = {
 };
 
 export default function ElevateAppBar(props) {
+  const { loginWithRedirect, logout, user, isLoading } = useAuth0();
+
   const navigate = useNavigate();
   const { getCart, count } = React.useContext(cartContext);
+
   React.useEffect(() => {
     getCart();
   }, []);
@@ -56,18 +60,39 @@ export default function ElevateAppBar(props) {
                 <span></span>
 
                 <ul id="menu">
-                  <a href="/cars">
-                    <li>View All Cars</li>
+                  {!isLoading && !user && (
+                    <li
+                      style={{ color: "green" }}
+                      onClick={() => {
+                        loginWithRedirect();
+                        navigate("/cars");
+                      }}>
+                      Shop
+                    </li>
+                  )}
+                  {!isLoading && user && (
+                    <li
+                      style={{ color: "red" }}
+                      onClick={() => {
+                        logout();
+                        navigate("/");
+                      }}>
+                      Log Out
+                    </li>
+                  )}
+                  {/* </Link> */}
+                  <a href="/login">
+                    <li>Profile</li>
                   </a>
-                  <a href="/add">
-                    <li>Add a Car</li>
-                  </a>
-                  <a href="/about">
+                  <Link to="/">
+                    <li>Main</li>
+                  </Link>
+                  <Link to="/cars">
+                    <li>Cars</li>
+                  </Link>
+                  <Link to="/about">
                     <li>About Us</li>
-                  </a>
-                  <a href="#">
-                    <li>Contact Us</li>
-                  </a>
+                  </Link>
                 </ul>
               </div>
             </nav>
@@ -80,7 +105,7 @@ export default function ElevateAppBar(props) {
                 // marginRight: "60px",
               }}
             />
-            <Box>
+            <Box sx={{ flexGrow: 0 }}>
               <IconButton
                 onClick={() => navigate("/cart")}
                 color="success"

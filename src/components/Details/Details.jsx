@@ -21,9 +21,14 @@ const Details = () => {
   return oneCar ? (
     <Container
       sx={{
+        display: "flex",
         flexDirection: "column",
+        height: "80vh",
+        backgroundColor: "white",
+        borderRadius: "10px",
       }}>
-      <Box>
+      <Box
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Typography variant="h4" marginTop="20px">
           {oneCar.title}
         </Typography>
@@ -33,9 +38,14 @@ const Details = () => {
         <Typography variant="h5" marginTop="20px">
           Price: {oneCar.price} €
         </Typography>
-        <Box marginTop="20px">
-          <img src={oneCar.image} width="50%" alt="car" />
-        </Box>
+        {/* <Box marginTop="20px"> */}
+        <img
+          src={oneCar.image}
+          style={{ borderRadius: "20px", marginTop: "20px" }}
+          width="50%"
+          alt="car"
+        />
+        {/* </Box> */}
       </Box>
       <Box marginTop="30px">
         <Button onClick={handleBack} variant="contained" color="secondary">

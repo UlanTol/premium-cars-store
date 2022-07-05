@@ -14,6 +14,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import ShoppingCartCheckoutTwoToneIcon from "@mui/icons-material/ShoppingCartCheckoutTwoTone";
 import { Box, IconButton, Typography } from "@mui/material";
 
 export default function Cart() {
@@ -32,7 +33,7 @@ export default function Cart() {
           <TableHead>
             <TableRow>
               <TableCell>Car</TableCell>
-              <TableCell align="right">Price</TableCell>
+              <TableCell align="right">Price, €</TableCell>
               <TableCell align="right">Quantity</TableCell>
               <TableCell align="right">Subprice</TableCell>
               <TableCell align="right">Info</TableCell>
@@ -75,8 +76,14 @@ export default function Cart() {
           </TableBody>
         </Table>
       </TableContainer>
-      <Box>
-        <Typography variant="h3">Total, €: {cart.totalPrice} </Typography>
+      <Box marginTop="10px">
+        <Typography variant="h5">Total, €: {cart.totalPrice} </Typography>
+      </Box>
+      <Box marginTop="40px">
+        <Typography variant="h5" marginRight="20px">
+          Checkout and proceed with Payment
+        </Typography>
+        <ShoppingCartCheckoutTwoToneIcon fontSize="large" />
       </Box>
     </Container>
   ) : (

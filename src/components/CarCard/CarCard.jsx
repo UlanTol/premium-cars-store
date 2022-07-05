@@ -58,7 +58,7 @@ export default function CarCard({ item }) {
             addToCart(item);
             setCarState(checkCarInCart(item.id));
           }}>
-          <AddShoppingCartIcon color={carState ? "secondary" : "primary"} />
+          <AddShoppingCartIcon color={carState ? "secondary" : "warning"} />
         </IconButton>
       </CardActions>
     </Card>
