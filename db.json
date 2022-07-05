@@ -30,21 +30,21 @@
     },
     {
       "title": "Lamborghini Huracan",
-      "price": 150000,
+      "price": "1500000",
       "description": "The Huracán Spyder is the pinnacle of Italian taste and hand craftsmanship",
       "image": "https://www.lambocars.com/wp-content/uploads/2019/02/2019_huracan_evo_spyder_1.jpg",
       "id": 5
     },
     {
       "title": "Lamborghini Urus",
-      "price": 380000,
+      "price": "3800000",
       "description": "Lamborghini Urus is the first Super Sport Utility Vehicle in the world",
       "image": "https://dvizhok.su/assets/images/resources/21922/urus-azerbaijan.jpg",
       "id": 6
     },
     {
       "title": "Lamborghini Huracán Coupe",
-      "price": 250000,
+      "price": "2500000",
       "description": "All the power and acceleration of a naturally aspirated V-10 engine ",
       "image": "https://i.pinimg.com/originals/53/bc/0f/53bc0fcd373de7dabd98b8638dd42b59.jpg",
       "id": 7
@@ -118,6 +118,76 @@
       "description": "The Bugatti Centodieci is a limited production mid-engine sports car.",
       "image": "https://wheelz.me/wp-content/uploads/2022/06/06-BUGATTI_Centodieci-first-delivery.jpg",
       "id": 17
+    },
+    {
+      "title": "Mercedes Sport Car",
+      "price": 78999,
+      "description": "Sport car by Mercedes Benz",
+      "image": "https://wallpaperaccess.com/full/3860224.jpg",
+      "id": 18
+    },
+    {
+      "title": "Lamborghini",
+      "price": 68900,
+      "description": "Super Car",
+      "image": "https://i.pinimg.com/736x/e8/20/21/e82021f8ea1464a34a819589b8718601.jpg",
+      "id": 19
+    },
+    {
+      "title": "Bugatti Chiron",
+      "price": 79900,
+      "description": "First car featuring Vagues de Lumière paintwork",
+      "image": "https://cimg1.ibsrv.net/ibimg/hgm/1920x1080-1/100/834/bugatti-chiron-super-sport-vagues-de-lumire-paintwork_100834977.jpg",
+      "id": 20
+    },
+    {
+      "title": "Tesla",
+      "price": 99999,
+      "description": "Model S Plaid to Pininfirina Battista",
+      "image": "https://assets.gqindia.com/photos/60e828e678863c66ba52c6ac/master/pass/Pininfarina-Battista.jpeg",
+      "id": 21
+    },
+    {
+      "title": "Hypercar",
+      "price": 99900,
+      "description": "Automobili Pininfarina's Battista",
+      "image": "https://ichef.bbci.co.uk/images/ic/1920x1080/p072nhvf.jpg",
+      "id": 22
+    },
+    {
+      "title": "Hyperion XP-1",
+      "price": 77777,
+      "description": "221-MPH Hydrogen-Powered Hypercar",
+      "image": "https://www.thestreet.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTc0NjM2MTIyMjU1NjY1MTQy/hyperion.jpg",
+      "id": 23
+    },
+    {
+      "title": "Aston Martin Valhalla",
+      "price": 88888,
+      "description": "New 2022 Aston Martin Valhalla",
+      "image": "https://media.drivingelectric.com/image/private/s--oWItga2e--/v1626347780/drivingelectric/2021-07/Aston%20Martin%20Valhalla%20001.jpg",
+      "id": 24
+    },
+    {
+      "title": "Aston Martin DB11",
+      "price": 77888,
+      "description": "DB11",
+      "image": "https://autoreview.ru/images/gallery/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/2021/July/21/Aston-Martin-DBS.jpg",
+      "id": 25
+    },
+    {
+      "title": "Aston Martin One-77",
+      "price": 99888,
+      "description": "One-77",
+      "image": "https://www.topgear.com/sites/default/files/cars-car/carousel/2021/05/dsc08261.jpg",
+      "id": 26
+    },
+    {
+      "title": "Aston Martin Vulcan",
+      "price": 69999,
+      "description": "Super Car",
+      "image": "https://avatars.mds.yandex.net/get-verba/216201/2a0000017ca79375ea5a3de5792bc7247c67/cattouchret",
+      "id": 27
     }
   ]
 }

@@ -5,7 +5,6 @@ import {
   Pagination,
   Slider,
   TextField,
-  ThemeProvider,
   Typography,
 } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
@@ -26,7 +25,7 @@ const CarsList = () => {
     searchParams.get("_page") ? +searchParams.get("_page") : 1
   );
 
-  const [price, setPrice] = useState([1, 10000000]);
+  const [price, setPrice] = useState([1, 1000000]);
 
   useEffect(() => {
     getCars();
@@ -57,7 +56,6 @@ const CarsList = () => {
   });
 
   return (
-    // <ThemeProvider theme={theme}>
     <Container>
       <Box
         component="form"
@@ -79,8 +77,8 @@ const CarsList = () => {
         <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
           <Typography>Filter by Price</Typography>
           <Slider
-            style={{ color: "white" }}
-            getAriaLabel={() => "Temperature range"}
+            style={{ color: "secondary" }}
+            getAriaLabel={() => "Price range"}
             color="secondary"
             value={price}
             onChange={(e, value) => {
@@ -88,7 +86,7 @@ const CarsList = () => {
             }}
             valueLabelDisplay="auto"
             min={0}
-            max={10000000}
+            max={1000000}
             step={50000}
           />
         </Box>

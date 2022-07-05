@@ -78,15 +78,17 @@ export default function ElevateAppBar(props) {
                       Log Out
                     </li>
                   )}
-                  {/* </Link> */}
                   <a href="/login">
                     <li>Profile</li>
                   </a>
-                  <Link to="/">
-                    <li>Main</li>
-                  </Link>
                   <Link to="/cars">
-                    <li>Cars</li>
+                    <li>Vehicles</li>
+                  </Link>
+                  <Link to="/add">
+                    <li>Add a Car</li>
+                  </Link>
+                  <Link to="/">
+                    <li>Home</li>
                   </Link>
                   <Link to="/about">
                     <li>About Us</li>
@@ -100,7 +102,6 @@ export default function ElevateAppBar(props) {
                 fontSize: "22px",
                 paddingLeft: "2px",
                 color: "white",
-                // marginRight: "60px",
               }}
             />
 
@@ -114,16 +115,6 @@ export default function ElevateAppBar(props) {
                 </Badge>
               </IconButton>
             </Box>
-            {/* <Box>
-              <ShoppingCartIcon
-                onClick={() => navigate("/cart")}
-                style={{ fontSize: "30px" }}
-              />
-              <Typography
-                onClick={() => navigate("/cart")}
-                variant="h1"
-                component="div"></Typography>
-            </Box> */}
           </Toolbar>
         </AppBar>
       </ElevationScroll>

@@ -19,7 +19,7 @@ import { Box, IconButton, Typography } from "@mui/material";
 
 export default function Cart() {
   const navigate = useNavigate();
-  const { getCart, cart, deleteFromCart, changeCount } =
+  const { getCart, cart, deleteFromCart, changeCount, usePayment } =
     React.useContext(cartContext);
 
   React.useEffect(() => {
@@ -83,7 +83,10 @@ export default function Cart() {
         <Typography variant="h5" marginRight="20px">
           Checkout and proceed with Payment
         </Typography>
-        <ShoppingCartCheckoutTwoToneIcon fontSize="large" />
+        <ShoppingCartCheckoutTwoToneIcon
+          onClick={() => navigate("/payment")}
+          fontSize="large"
+        />
       </Box>
     </Container>
   ) : (

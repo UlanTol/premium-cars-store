@@ -33,7 +33,7 @@ const AboutUs = () => {
           fairness and new and well-maintained vehicles round off our overall
           package. Get to know our passion and experience what it's all about.
         </Typography>
-        <Typography variant="h5">We look forward to you!</Typography>
+        <Typography variant="h5">We look forward to see you!</Typography>
       </Box>
       <Box marginTop="30px">
         <Button color="secondary" onClick={() => navigate("/cars")}>

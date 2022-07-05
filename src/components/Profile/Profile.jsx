@@ -5,10 +5,6 @@ import JSONPretty from "react-json-pretty";
 const Profile = () => {
   const { user } = useAuth0();
 
-  // if (isLoading) {
-  //   return <div>Loading ...</div>;
-  // }
-
   return (
     <div
       style={{

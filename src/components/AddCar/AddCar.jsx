@@ -60,7 +60,7 @@ const AddCar = () => {
           value={image}
           onChange={e => setImage(e.target.value)}
         />
-        <Button onClick={handleSave} variant="contained" color="success">
+        <Button onClick={handleSave} variant="contained" color="warning">
           Save
         </Button>
       </Box>

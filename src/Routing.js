@@ -8,6 +8,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Cart from "./components/Cart/Cart";
 import Profile from "./components/Profile/Profile";
 import Carousel1 from "./components/Carousel/Carousel";
+import PaymentForm from "./components/PaymentForm/PaymentForm";
 
 const Routing = () => {
   return (
@@ -20,6 +21,7 @@ const Routing = () => {
       <Route path="/about" element={<AboutUs />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/login" element={<Profile />} />
+      <Route path="/payment" element={<PaymentForm />} />
     </Routes>
   );
 };
