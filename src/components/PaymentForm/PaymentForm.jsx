@@ -23,7 +23,7 @@ export default class PaymentForm extends React.Component {
 
   handleInputChange = e => {
     const { name, number, value } = e.target;
-    if (!value || !name) {
+    if (!value.trim("") || !name.trim("")) {
       return alert("Please insert all the required information");
     }
     this.setState({ [name]: value });

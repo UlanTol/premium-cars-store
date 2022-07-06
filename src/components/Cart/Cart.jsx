@@ -91,9 +91,6 @@ export default function Cart() {
           fontSize="large">
           Checkout
         </Button>
-        {/* <ShoppingCartCheckoutTwoToneIcon
-          
-        /> */}
       </Box>
     </Container>
   ) : (
