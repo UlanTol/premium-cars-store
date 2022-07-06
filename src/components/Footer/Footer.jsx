@@ -15,7 +15,7 @@ const Footer = () => {
         className="f-item-con">
         <div className="app-info">
           <span className="app-name">
-            <span className="app-initial">P</span>remium Cars
+            <span className="app-initial">P</span>remium Cars AG
           </span>
           <p>
             <strong> Buy your best car</strong> and enjoy <strong></strong> it

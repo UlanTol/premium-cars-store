@@ -14,12 +14,12 @@ import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import ShoppingCartCheckoutTwoToneIcon from "@mui/icons-material/ShoppingCartCheckoutTwoTone";
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 
 export default function Cart() {
   const navigate = useNavigate();
-  const { getCart, cart, deleteFromCart, changeCount, usePayment } =
+  const { getCart, cart, deleteFromCart, changeCount } =
     React.useContext(cartContext);
 
   React.useEffect(() => {
@@ -81,12 +81,19 @@ export default function Cart() {
       </Box>
       <Box marginTop="40px">
         <Typography variant="h5" marginRight="20px">
-          Checkout and proceed with Payment
+          Proceed with your Order Form:
         </Typography>
-        <ShoppingCartCheckoutTwoToneIcon
-          onClick={() => navigate("/payment")}
-          fontSize="large"
-        />
+        <Button
+          variant="contained"
+          color="success"
+          onClick={() => navigate("/order")}
+          endIcon={<SendIcon />}
+          fontSize="large">
+          Checkout
+        </Button>
+        {/* <ShoppingCartCheckoutTwoToneIcon
+          
+        /> */}
       </Box>
     </Container>
   ) : (

@@ -12,6 +12,9 @@ export default class PaymentForm extends React.Component {
     focus: "",
     name: "",
     number: "",
+    address: "",
+    phone: "",
+    email: "",
   };
 
   handleInputFocus = e => {
@@ -19,16 +22,17 @@ export default class PaymentForm extends React.Component {
   };
 
   handleInputChange = e => {
-    const { name, value } = e.target;
+    const { name, number, value } = e.target;
     if (!value || !name) {
-      return alert("All inputs must be completed");
+      return alert("Please insert all the required information");
     }
     this.setState({ [name]: value });
+    this.setState({ [number]: value });
   };
 
   render() {
     return (
-      <Container sx={{ display: "flex", justifyContent: "center" }}>
+      <Container>
         <div id="PaymentForm">
           <Cards
             cvc={this.state.cvc}
@@ -37,50 +41,68 @@ export default class PaymentForm extends React.Component {
             name={this.state.name}
             number={this.state.number}
           />
-          <form>...</form>
-          <form>
-            <input
-              type="tel"
-              name="number"
-              placeholder="Card Number"
-              onChange={this.handleInputChange}
-              onFocus={this.handleInputFocus}
-            />
-          </form>
-          ...
-          <form>
-            <input
-              type="name"
-              name="name"
-              placeholder="Card Holder Name"
-              onChange={this.handleInputChange}
-              onFocus={this.handleInputFocus}
-            />
-          </form>
-          ...
-          <form>
-            <input
-              type="expiry"
-              name="expiry"
-              placeholder="Expiry"
-              onChange={this.handleInputChange}
-              onFocus={this.handleInputFocus}
-            />
-          </form>
-          ...
-          <form>
-            <input
-              type="cvc"
-              name="cvc"
-              placeholder="CVC"
-              onChange={this.handleInputChange}
-              onFocus={this.handleInputFocus}
-            />
-          </form>
-          <form>...</form>
-          <Button variant="contained" color="warning" endIcon={<SendIcon />}>
-            Make a Payment
-          </Button>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignContent: "center",
+            }}>
+            <form>...</form>
+            <form style={{ marginTop: "10px" }}>Enter Credit Card number</form>
+            <form>
+              <input
+                type="tel"
+                name="number"
+                placeholder="Card Number"
+                onChange={this.handleInputChange}
+                onFocus={this.handleInputFocus}
+              />
+            </form>
+            <form>...</form>
+            Enter Full Name
+            <form>
+              <input
+                type="name"
+                name="name"
+                placeholder="Card Holder Name"
+                onChange={this.handleInputChange}
+                onFocus={this.handleInputFocus}
+              />
+            </form>
+            <form>...</form>
+            Enter CVC Code
+            <form>
+              <input
+                type="cvc"
+                name="cvc"
+                placeholder="CVC"
+                onChange={this.handleInputChange}
+                onFocus={this.handleInputFocus}
+              />
+            </form>
+            <form>...</form>
+            Enter Card Expiry date
+            <form>
+              <input
+                type="expiry"
+                name="expiry"
+                placeholder="Valid Thru"
+                onChange={this.handleInputChange}
+                onFocus={this.handleInputFocus}
+              />
+            </form>
+            <form>...</form>
+            <Button
+              href="/thank-you"
+              style={{ marginTop: "10px" }}
+              variant="contained"
+              color="warning"
+              endIcon={<SendIcon />}>
+              Proceed with Payment
+            </Button>
+          </div>
         </div>
       </Container>
     );
