@@ -104,7 +104,7 @@ const CarsList = () => {
           }}
           page={currentPage}
           count={pages}
-          color="primary"
+          color="success"
         />
       </Box>
     </Container>

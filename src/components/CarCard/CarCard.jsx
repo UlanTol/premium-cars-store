@@ -11,13 +11,15 @@ import { IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { cartContext } from "../../contexts/cartContext";
 import { Rating } from "@mui/material";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 export default function CarCard({ item }) {
   const { deleteCar } = React.useContext(carsContext);
   const { addToCart, checkCarInCart } = React.useContext(cartContext);
   const navigate = useNavigate();
   const [carState, setCarState] = React.useState(checkCarInCart(item.id));
-  const [like, setLike] = React.useState(false);
+  const [fav, setFav] = React.useState(false);
 
   return (
     <Card
@@ -37,28 +39,29 @@ export default function CarCard({ item }) {
       </CardContent>
       <CardMedia component="img" height="140" image={item.image} alt="car" />
       <br />
-      <Rating name="simple-controlled" defaultValue={5} />
+      <Rating name="size-small" defaultValue={5} />
       <br />
-      <div
-        style={{
-          marginTop: "15px",
-        }}>
-        {like ? (
-          <img
-            onClick={() => setLike(!like)}
-            alt="like"
-            width="30px"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzdqZT9u4TbZgOWGu4XGRm3Uw1Z6C9zY5p7g&usqp=CAU"
-          />
-        ) : (
-          <img
-            onClick={() => setLike(!like)}
-            alt="like"
-            width="30px"
-            src="https://i.pinimg.com/474x/a3/6b/be/a36bbeb6573ccb3396ad3c225b5157f9.jpg"
-          />
-        )}
-      </div>
+
+      {!fav && (
+        <IconButton
+          onClick={() => {
+            setFav(!fav);
+          }}
+          aria-label="delete"
+          color="secondary">
+          <FavoriteBorderIcon></FavoriteBorderIcon>
+        </IconButton>
+      )}
+      {fav && (
+        <IconButton
+          onClick={() => {
+            setFav(!fav);
+          }}
+          aria-label="delete"
+          color="error">
+          <FavoriteIcon></FavoriteIcon>
+        </IconButton>
+      )}
 
       <CardActions>
         <Button

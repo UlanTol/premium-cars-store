@@ -11,6 +11,7 @@ import Carousel1 from "./components/Carousel/Carousel";
 import PaymentForm from "./components/PaymentForm/PaymentForm";
 import OrderForm from "./components/OrderForm/OrderForm";
 import ThankYou from "./components/ThankYou/ThankYou";
+import Footer from "./components/Footer/Footer";
 
 const Routing = () => {
   return (

@@ -5,7 +5,7 @@ import "antd/dist/antd.css";
 
 import { Typography } from "antd";
 import { useNavigate } from "react-router-dom";
-const { Title, Link } = Typography;
+const { Title } = Typography;
 
 const InnerPage = () => {
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ const InnerPage = () => {
             onClick={() => navigate("/cars")}
             type="link"
             ghost>
-            Learn more...
+            Drive to Shop...
           </Button>
         </div>
       </div>

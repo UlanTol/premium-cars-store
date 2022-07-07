@@ -1,6 +1,8 @@
 import { Container } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
 
 const OrderForm = () => {
   const [name, setName] = useState("");
@@ -114,11 +116,14 @@ const OrderForm = () => {
           </label>
         </div>
 
-        <button
+        <Button
+          variant="contained"
+          color="warning"
           style={{ marginTop: "20px" }}
-          onClick={() => navigate("/payment")}>
-          Submit
-        </button>
+          onClick={() => navigate("/payment")}
+          endIcon={<SendIcon />}>
+          Submit / Proceed to Payment
+        </Button>
       </div>
     </Container>
   );

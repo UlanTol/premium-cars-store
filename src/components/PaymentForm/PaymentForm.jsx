@@ -98,7 +98,7 @@ export default class PaymentForm extends React.Component {
               href="/thank-you"
               style={{ marginTop: "10px" }}
               variant="contained"
-              color="warning"
+              color="primary"
               endIcon={<SendIcon />}>
               Proceed with Payment
             </Button>

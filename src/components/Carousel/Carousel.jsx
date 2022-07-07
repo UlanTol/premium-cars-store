@@ -6,8 +6,6 @@ import Section from "../Section/Section";
 import Section1 from "../Section/Section1";
 import Section2 from "../Section/Section2";
 import InnerPage from "../InnerPage/InnerPage";
-import { useNavigate } from "react-router-dom";
-import { LeftOutlined } from "@ant-design/icons";
 
 const Carousel1 = () => {
   const contentStyle = {
