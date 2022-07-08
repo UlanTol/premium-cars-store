@@ -45,7 +45,7 @@ const InnerPage = () => {
           style={{ display: "flex", marginTop: "10px" }}
           className="site-button-ghost-wrapper">
           <Button
-            style={{ height: "10px" }}
+            style={{ height: "30px", color: "black" }}
             onClick={() => navigate("/cars")}
             type="link"
             ghost>

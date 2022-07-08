@@ -1,18 +1,18 @@
 .main1 {
-  background-image: url("../assets/1.jpg");
+  background-image: url("https://mewallpaper.com/thumbnail/cars/4425-lamborghini-aventador-white-wallpaper-download-free.jpg");
   background-size: cover;
   color: black;
 }
 .main2 {
-  background-image: url("../assets/2.jpg");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Regera_%28light_gradient%29.png/1200px-Regera_%28light_gradient%29.png");
   background-size: cover;
 }
 .main3 {
-  background-image: url("../assets/3.jpg");
+  background-image: url("https://www.birchwood.ca/wp-content/uploads/2019/10/Corvette-2020-e1573078711550.png");
   background-size: cover;
 }
 .main4 {
-  background-image: url("../assets/4.jpg");
+  background-image: url("https://images.pexels.com/photos/8664302/pexels-photo-8664302.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200");
   /* background-color: black; */
   background-size: 100% 100%;
 }

@@ -1,21 +1,18 @@
-import { Box, Button, Container } from "@mui/material";
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import {
+  Box,
+  Container,
   createTheme,
   Pagination,
-  // Slider,
+  Slider,
   TextField,
   Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { carsContext } from "../../contexts/cars.Context";
-
-import Slider from "react-slick";
-import CardMeta from "../CardMeta/CardMeta";
 import CarCard from "../CarCard/CarCard";
-const CarsList = () => {
+
+const AllCarsList = () => {
   const { getCars, cars, pages } = useContext(carsContext);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,38 +25,39 @@ const CarsList = () => {
     searchParams.get("_page") ? +searchParams.get("_page") : 1
   );
 
-  const [price, setPrice] = useState([1, 1000000]);
+  const [price, setPrice] = useState([1, 10000000]);
 
-  // const CarsList = () => {
-  const navigate = useNavigate();
+  useEffect(() => {
+    getCars();
+  }, []);
+  useEffect(() => {
+    setSearchParams({
+      q: search,
+      _page: currentPage,
+      _limit: 12,
+      price_gte: price[0],
+      price_lte: price[1],
+    });
+  }, [search, currentPage, price]);
 
-  // const { getCars, cars, pages } = useContext(carsContext);
+  useEffect(() => {
+    getCars();
+  }, [searchParams]);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    adaptiveHeight: true,
-    focusOnSelect: true,
-    swipeToSlide: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
-  };
   return (
     <Container>
       <Box
         component="form"
         sx={{
           "& > :not(style)": { m: 1, width: "50ch" },
+          display: "flex",
+          flexDirection: "column",
           marginTop: "30px",
+          alignItems: "center",
           justifyContent: "space-evenly",
         }}
         noValidate
         autoComplete="off">
-        <Button onClick={() => navigate("/all-cars")}>All Cars</Button>
         <TextField
           value={search}
           color="secondary"
@@ -71,8 +69,8 @@ const CarsList = () => {
         <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
           <Typography>Filter by Price</Typography>
           <Slider
-            style={{ color: "secondary" }}
-            getAriaLabel={() => "Price range"}
+            style={{ color: "white" }}
+            getAriaLabel={() => "Temperature range"}
             color="secondary"
             value={price}
             onChange={(e, value) => {
@@ -80,12 +78,11 @@ const CarsList = () => {
             }}
             valueLabelDisplay="auto"
             min={0}
-            max={1000000}
+            max={10000000}
             step={50000}
           />
         </Box>
       </Box>
-
       <Box marginTop="50px">
         {cars.map(item => (
           <CarCard key={item.id} item={item} />
@@ -98,19 +95,11 @@ const CarsList = () => {
           }}
           page={currentPage}
           count={pages}
-          color="success"
+          color="primary"
         />
-      </Box>
-      <Slider {...settings}>
-        <Box style={{ height: "30vh" }}>
-          {/* {cars.map(item => ( */}
-          <CardMeta />
-          {/* key={item.id} item={item}  */}
-          {/* ))} */}
-        </Box>
-      </Slider>
+      </Box>{" "}
     </Container>
   );
 };
 
-export default CarsList;
+export default AllCarsList;

@@ -24,11 +24,20 @@ export default function CarCard({ item }) {
   return (
     <Card
       sx={{
-        maxWidth: 360,
+        // width: "90vw",
+        // height: "500px",
+        maxWidth: "360px",
         margin: "20px",
         flexWrap: "wrap",
         textAlign: "center",
       }}>
+      <CardMedia
+        // style={{ width: "30px" }}
+        component="img"
+        height="140"
+        image={item.image}
+        alt="car"
+      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {item.title}

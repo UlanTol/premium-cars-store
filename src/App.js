@@ -11,6 +11,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box } from "@mui/system";
 import Auth0ProviderWithHistory from "./contexts/auth0Provider";
 import Footer from "./components/Footer/Footer";
+import SMS from "./components/SMS/SMS";
 
 const darkTheme = createTheme({
   palette: {
@@ -32,6 +33,7 @@ const App = () => {
           <Auth0ProviderWithHistory>
             <ThemeProvider theme={darkTheme}>
               <Navbar />
+              <SMS />
               {loading == true ? (
                 <Box
                   style={{
@@ -43,7 +45,7 @@ const App = () => {
                   }}>
                   <Rings
                     height="200"
-                    width="200"
+                    // width=""
                     color="white"
                     ariaLabel="loading"
                   />

@@ -4,6 +4,23 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../Footer/style.css";
 
+import { Button, notification } from "antd";
+
+const openNotification = () => {
+  notification.open({
+    message: "Message",
+    description:
+      "Thank you for your message, we will contact you as soon as possible)",
+    placement: "bottomLeft",
+    bottom: 50,
+    duration: 3,
+    rtl: true,
+    onClick: () => {
+      console.log("Notification Clicked!");
+    },
+  });
+};
+
 const Footer = () => {
   const { loginWithRedirect } = useAuth0();
   const navigate = useNavigate();
@@ -32,6 +49,12 @@ const Footer = () => {
                 navigate("/cars");
               }}>
               Sign In
+            </li>{" "}
+            <li
+              onClick={() => {
+                navigate("/address");
+              }}>
+              Address
             </li>
           </ul>
         </div>
@@ -49,9 +72,13 @@ const Footer = () => {
             <Input placeholder="Name" />
             <Input placeholder="Email" />
             <Input placeholder="Message" />
-            <button type="submit" className="f-btn">
+
+            <Button
+              type="primary"
+              className="f-btn"
+              onClick={() => openNotification("bottomLeft")}>
               Submit
-            </button>
+            </Button>
           </form>
         </div>
       </div>
