@@ -83,15 +83,17 @@ export default function ElevateAppBar(props) {
                       Log Out
                     </li>
                   )}
-                  {/* </Link> */}
                   <a href="/login">
                     <li>Profile</li>
                   </a>
-                  <Link to="/">
-                    <li>Main</li>
-                  </Link>
                   <Link to="/cars">
-                    <li>Cars</li>
+                    <li>Vehicles</li>
+                  </Link>
+                  <Link to="/add">
+                    <li>Add a Car</li>
+                  </Link>
+                  <Link to="/">
+                    <li>Home</li>
                   </Link>
                   <Link to="/address">
                     <li>Address</li>
@@ -108,7 +110,6 @@ export default function ElevateAppBar(props) {
                 fontSize: "22px",
                 paddingLeft: "2px",
                 color: "white",
-                // marginRight: "60px",
               }}
             />
 

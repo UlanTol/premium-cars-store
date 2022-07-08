@@ -14,8 +14,8 @@ import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import ShoppingCartCheckoutTwoToneIcon from "@mui/icons-material/ShoppingCartCheckoutTwoTone";
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 
 export default function Cart() {
   const navigate = useNavigate();
@@ -82,10 +82,22 @@ export default function Cart() {
         </Typography>
       </Box>
       <Box marginTop="40px">
+<<<<<<< HEAD
         <Typography style={{ color: "white" }} variant="h5" marginRight="20px">
           Checkout and proceed with Payment
+=======
+        <Typography variant="h5" marginRight="20px">
+          Proceed with your Order Form:
+>>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
         </Typography>
-        <ShoppingCartCheckoutTwoToneIcon fontSize="large" />
+        <Button
+          variant="contained"
+          color="success"
+          onClick={() => navigate("/order")}
+          endIcon={<SendIcon />}
+          fontSize="large">
+          Checkout
+        </Button>
       </Box>
     </Container>
   ) : (

@@ -32,10 +32,10 @@ const Footer = () => {
         className="f-item-con">
         <div className="app-info">
           <span className="app-name">
-            <span className="app-initial">P</span>remium Cars
+            <span className="app-initial">P</span>remium Cars AG
           </span>
           <p>
-            <strong> Buy your best car</strong> enjoy <strong></strong> them
+            <strong> Buy your best car</strong> and enjoy <strong></strong> it
           </p>
         </div>
         <div className="useful-links">
@@ -63,7 +63,7 @@ const Footer = () => {
           <ul>
             <li>Help Me</li>
             <li>Feedback</li>
-            <li>Report a Issue / Bug</li>
+            <li>Report an Issue / Bug</li>
           </ul>
         </div>
         <div className="g-i-t">
@@ -82,7 +82,9 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div className="cr-con">Copyright &copy; 2022 | Made by Rawnge</div>
+      <div className="cr-con">
+        Copyright &copy; 2022 | Made by Ruslan and Ulan
+      </div>
     </footer>
   );
 };

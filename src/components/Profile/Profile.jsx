@@ -1,13 +1,8 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import JSONPretty from "react-json-pretty";
 
 const Profile = () => {
   const { user } = useAuth0();
-
-  // if (isLoading) {
-  //   return <div>Loading ...</div>;
-  // }
 
   return (
     <div
@@ -31,7 +26,6 @@ const Profile = () => {
       />
       <h2 style={{ color: "white" }}>{user.name}</h2>
       <p>{user.email}</p>
-      {/* <pre>{JSON.stringify(user, null, 2)}</pre> */}
     </div>
   );
 };

@@ -10,12 +10,16 @@ import { useNavigate } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { cartContext } from "../../contexts/cartContext";
+import { Rating } from "@mui/material";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 export default function CarCard({ item }) {
   const { deleteCar } = React.useContext(carsContext);
   const { addToCart, checkCarInCart } = React.useContext(cartContext);
   const navigate = useNavigate();
   const [carState, setCarState] = React.useState(checkCarInCart(item.id));
+  const [fav, setFav] = React.useState(false);
 
   return (
     <Card
@@ -27,6 +31,7 @@ export default function CarCard({ item }) {
         flexWrap: "wrap",
         textAlign: "center",
       }}>
+<<<<<<< HEAD
       <CardMedia
         // style={{ width: "30px" }}
         component="img"
@@ -34,6 +39,8 @@ export default function CarCard({ item }) {
         image={item.image}
         alt="car"
       />
+=======
+>>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {item.title}
@@ -42,6 +49,32 @@ export default function CarCard({ item }) {
           Price: {item.price} €
         </Typography>
       </CardContent>
+      <CardMedia component="img" height="140" image={item.image} alt="car" />
+      <br />
+      <Rating name="size-small" defaultValue={5} />
+      <br />
+
+      {!fav && (
+        <IconButton
+          onClick={() => {
+            setFav(!fav);
+          }}
+          aria-label="delete"
+          color="secondary">
+          <FavoriteBorderIcon></FavoriteBorderIcon>
+        </IconButton>
+      )}
+      {fav && (
+        <IconButton
+          onClick={() => {
+            setFav(!fav);
+          }}
+          aria-label="delete"
+          color="error">
+          <FavoriteIcon></FavoriteIcon>
+        </IconButton>
+      )}
+
       <CardActions>
         <Button
           size="small"

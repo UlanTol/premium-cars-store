@@ -30,7 +30,7 @@ const AddCar = () => {
   return (
     <Container maxWidth="sm">
       <Box display={"flex"} flexDirection={"column"} marginTop={"30px"}>
-        <Typography variant="h4">Add Car</Typography>
+        <Typography variant="h4">Add a Car</Typography>
         <TextField
           id="outlined-basic"
           label="Title"
@@ -60,7 +60,7 @@ const AddCar = () => {
           value={image}
           onChange={e => setImage(e.target.value)}
         />
-        <Button onClick={handleSave} variant="contained" color="success">
+        <Button onClick={handleSave} variant="contained" color="warning">
           Save
         </Button>
       </Box>

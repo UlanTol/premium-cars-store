@@ -38,14 +38,12 @@ const Details = () => {
         <Typography variant="h5" marginTop="20px">
           Price: {oneCar.price} €
         </Typography>
-        {/* <Box marginTop="20px"> */}
         <img
           src={oneCar.image}
           style={{ borderRadius: "20px", marginTop: "20px" }}
           width="50%"
           alt="car"
         />
-        {/* </Box> */}
       </Box>
       <Box marginTop="30px">
         <Button onClick={handleBack} variant="contained" color="secondary">

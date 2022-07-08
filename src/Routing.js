@@ -10,6 +10,10 @@ import Profile from "./components/Profile/Profile";
 import Map from "./components/Map/Map";
 import AllCarsList from "./components/AllCarsList/AllCarsList";
 import Carousel1 from "./components/Carousel/Carousel";
+import PaymentForm from "./components/PaymentForm/PaymentForm";
+import OrderForm from "./components/OrderForm/OrderForm";
+import ThankYou from "./components/ThankYou/ThankYou";
+import Footer from "./components/Footer/Footer";
 
 const Routing = () => {
   return (
@@ -23,7 +27,13 @@ const Routing = () => {
       <Route path="/about" element={<AboutUs />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/login" element={<Profile />} />
+<<<<<<< HEAD
       <Route path="/address" element={<Map />} />
+=======
+      <Route path="/order" element={<OrderForm />} />
+      <Route path="/payment" element={<PaymentForm />} />
+      <Route path="/thank-you" element={<ThankYou />} />
+>>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
     </Routes>
   );
 };
