@@ -13,7 +13,6 @@ import Carousel1 from "./components/Carousel/Carousel";
 import PaymentForm from "./components/PaymentForm/PaymentForm";
 import OrderForm from "./components/OrderForm/OrderForm";
 import ThankYou from "./components/ThankYou/ThankYou";
-import Footer from "./components/Footer/Footer";
 
 const Routing = () => {
   return (
@@ -27,9 +26,7 @@ const Routing = () => {
       <Route path="/about" element={<AboutUs />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/login" element={<Profile />} />
-
       <Route path="/address" element={<Map />} />
-
       <Route path="/order" element={<OrderForm />} />
       <Route path="/payment" element={<PaymentForm />} />
       <Route path="/thank-you" element={<ThankYou />} />

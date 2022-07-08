@@ -4,6 +4,8 @@ import Cards from "react-credit-cards";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import "react-credit-cards/es/styles-compiled.css";
+import { IconButton } from "@mui/material";
+import { Fingerprint } from "@mui/icons-material";
 
 export default class PaymentForm extends React.Component {
   state = {
@@ -49,7 +51,9 @@ export default class PaymentForm extends React.Component {
               justifyContent: "space-between",
               alignContent: "center",
             }}>
-            <form>...</form>
+            <IconButton aria-label="fingerprint" color="error">
+              <Fingerprint />
+            </IconButton>
             <form style={{ marginTop: "10px" }}>Enter Credit Card number</form>
             <form>
               <input
@@ -60,7 +64,9 @@ export default class PaymentForm extends React.Component {
                 onFocus={this.handleInputFocus}
               />
             </form>
-            <form>...</form>
+            <IconButton aria-label="fingerprint" color="warning">
+              <Fingerprint />
+            </IconButton>
             Enter Full Name
             <form>
               <input
@@ -71,7 +77,9 @@ export default class PaymentForm extends React.Component {
                 onFocus={this.handleInputFocus}
               />
             </form>
-            <form>...</form>
+            <IconButton aria-label="fingerprint" color="secondary">
+              <Fingerprint />
+            </IconButton>
             Enter CVC Code
             <form>
               <input
@@ -82,7 +90,9 @@ export default class PaymentForm extends React.Component {
                 onFocus={this.handleInputFocus}
               />
             </form>
-            <form>...</form>
+            <IconButton aria-label="fingerprint" color="primary">
+              <Fingerprint />
+            </IconButton>
             Enter Card Expiry date
             <form>
               <input
@@ -93,14 +103,16 @@ export default class PaymentForm extends React.Component {
                 onFocus={this.handleInputFocus}
               />
             </form>
-            <form>...</form>
+            <IconButton aria-label="fingerprint" color="error">
+              <Fingerprint />
+            </IconButton>
             <Button
               href="/thank-you"
               style={{ marginTop: "10px" }}
               variant="contained"
-              color="primary"
+              color="warning"
               endIcon={<SendIcon />}>
-              Proceed with Payment
+              Pay Now
             </Button>
           </div>
         </div>

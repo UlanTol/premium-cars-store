@@ -24,20 +24,12 @@ export default function CarCard({ item }) {
   return (
     <Card
       sx={{
-        // width: "90vw",
-        // height: "500px",
         maxWidth: "360px",
         margin: "20px",
         flexWrap: "wrap",
         textAlign: "center",
       }}>
-      <CardMedia
-        // style={{ width: "30px" }}
-        component="img"
-        height="140"
-        image={item.image}
-        alt="car"
-      />
+      <CardMedia component="img" height="140" image={item.image} alt="car" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {item.title}
@@ -46,8 +38,7 @@ export default function CarCard({ item }) {
           Price: {item.price} €
         </Typography>
       </CardContent>
-      <CardMedia component="img" height="140" image={item.image} alt="car" />
-      <br />
+
       <Rating name="size-small" defaultValue={5} />
       <br />
 

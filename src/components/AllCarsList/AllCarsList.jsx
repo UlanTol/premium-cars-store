@@ -1,7 +1,6 @@
 import {
   Box,
   Container,
-  createTheme,
   Pagination,
   Slider,
   TextField,
@@ -34,7 +33,7 @@ const AllCarsList = () => {
     setSearchParams({
       q: search,
       _page: currentPage,
-      _limit: 12,
+      _limit: 6,
       price_gte: price[0],
       price_lte: price[1],
     });
@@ -69,9 +68,8 @@ const AllCarsList = () => {
         <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
           <Typography>Filter by Price</Typography>
           <Slider
-            style={{ color: "white" }}
             getAriaLabel={() => "Temperature range"}
-            color="secondary"
+            color="warning"
             value={price}
             onChange={(e, value) => {
               setPrice(value);
@@ -95,9 +93,9 @@ const AllCarsList = () => {
           }}
           page={currentPage}
           count={pages}
-          color="primary"
+          color="warning"
         />
-      </Box>{" "}
+      </Box>
     </Container>
   );
 };

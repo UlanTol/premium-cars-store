@@ -42,11 +42,11 @@ const Footer = () => {
           <div className="footer-title">Useful Links</div>
           <ul>
             <li onClick={() => navigate("/")}>Main</li>
-            <li onClick={() => navigate("/cars")}>Shop</li>
+            <li onClick={() => navigate("/all-cars")}>Shop</li>
             <li
               onClick={() => {
                 loginWithRedirect();
-                navigate("/cars");
+                navigate("/all-cars");
               }}>
               Sign In
             </li>{" "}

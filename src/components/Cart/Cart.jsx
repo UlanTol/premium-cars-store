@@ -83,9 +83,6 @@ export default function Cart() {
       </Box>
       <Box marginTop="40px">
         <Typography style={{ color: "white" }} variant="h5" marginRight="20px">
-          Checkout and proceed with Payment
-        </Typography>
-        <Typography variant="h5" marginRight="20px">
           Proceed with your Order Form:
         </Typography>
         <Button

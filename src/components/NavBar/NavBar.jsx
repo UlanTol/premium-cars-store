@@ -68,7 +68,7 @@ export default function ElevateAppBar(props) {
                       style={{ color: "green" }}
                       onClick={() => {
                         loginWithRedirect();
-                        navigate("/cars");
+                        navigate("/all-cars");
                       }}>
                       Shop
                     </li>
@@ -86,7 +86,7 @@ export default function ElevateAppBar(props) {
                   <a href="/login">
                     <li>Profile</li>
                   </a>
-                  <Link to="/cars">
+                  <Link to="/all-cars">
                     <li>Vehicles</li>
                   </Link>
                   <Link to="/add">

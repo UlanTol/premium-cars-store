@@ -1,6 +1,6 @@
 import React from "react";
 import "../Section/Style.css";
-import { Button, Space, Typography } from "antd";
+import { Button, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const { Title } = Typography;
@@ -46,7 +46,7 @@ const Section = () => {
             onClick={() => navigate("/cars")}
             type="link"
             ghost>
-            Learn more
+            See more
           </Button>
         </div>
       </div>
