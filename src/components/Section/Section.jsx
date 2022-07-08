@@ -39,10 +39,10 @@ const Section = () => {
           Design a life you love.
         </Title>
         <div
-          style={{ display: "flex", marginTop: "30px" }}
+          style={{ display: "flex", marginTop: "10px" }}
           className="site-button-ghost-wrapper">
           <Button
-            style={{}}
+            style={{ color: "white" }}
             onClick={() => navigate("/cars")}
             type="link"
             ghost>

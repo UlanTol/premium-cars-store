@@ -1,17 +1,15 @@
 import "antd/dist/antd.css";
-import { Button, Carousel } from "antd";
+import { Carousel } from "antd";
 
 import React from "react";
 import Section from "../Section/Section";
 import Section1 from "../Section/Section1";
 import Section2 from "../Section/Section2";
 import InnerPage from "../InnerPage/InnerPage";
-import { useNavigate } from "react-router-dom";
-import { LeftOutlined } from "@ant-design/icons";
-
 const Carousel1 = () => {
-  const contentStyle = {
+  const contentStyles = {
     height: "100vh",
+
     color: "#fff",
     lineHeight: "160px",
     textAlign: "center",
@@ -19,25 +17,25 @@ const Carousel1 = () => {
   };
   return (
     <div>
-      <Carousel autoplay dotPosition="top">
+      <Carousel autoplay>
         <div>
-          <h2 style={contentStyle}>
-            <Section />
-          </h2>
-        </div>
-        <div>
-          <h3 style={contentStyle}>
+          <h3 style={contentStyles}>
             <InnerPage />
           </h3>
         </div>
         <div>
-          <h3 style={contentStyle}>
-            <Section2 />
+          <h3 style={contentStyles}>
+            <Section1 />
           </h3>
         </div>
         <div>
-          <h3 style={contentStyle}>
-            <Section1 />
+          <h2 style={contentStyles}>
+            <Section />
+          </h2>
+        </div>
+        <div>
+          <h3 style={contentStyles}>
+            <Section2 />
           </h3>
         </div>
       </Carousel>

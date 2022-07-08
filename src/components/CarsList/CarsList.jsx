@@ -1,63 +1,30 @@
-import {
-  Box,
-  Container,
-  createTheme,
-  Pagination,
-  Slider,
-  TextField,
-  ThemeProvider,
-  Typography,
-} from "@mui/material";
-import React, { useContext, useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Box, Button, Container } from "@mui/material";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { carsContext } from "../../contexts/cars.Context";
-import CarCard from "../CarCard/CarCard";
+
+import Slider from "react-slick";
+import CardMeta from "../CardMeta/CardMeta";
 
 const CarsList = () => {
+  const navigate = useNavigate();
+
   const { getCars, cars, pages } = useContext(carsContext);
 
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const [search, setSearch] = useState(
-    searchParams.get("q") ? searchParams.get("q") : ""
-  );
-
-  const [currentPage, setCurrentPage] = useState(
-    searchParams.get("_page") ? +searchParams.get("_page") : 1
-  );
-
-  const [price, setPrice] = useState([1, 10000000]);
-
-  useEffect(() => {
-    getCars();
-  }, []);
-  useEffect(() => {
-    setSearchParams({
-      q: search,
-      _page: currentPage,
-      _limit: 6,
-      price_gte: price[0],
-      price_lte: price[1],
-    });
-  }, [search, currentPage, price]);
-
-  useEffect(() => {
-    getCars();
-  }, [searchParams]);
-
-  let theme = createTheme({
-    palette: {
-      // primary: {
-      //   main: "white",
-      // },
-      secondary: {
-        main: "#edf2ff",
-      },
-    },
-  });
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    adaptiveHeight: true,
+    focusOnSelect: true,
+    swipeToSlide: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
+  };
   return (
-    // <ThemeProvider theme={theme}>
     <Container>
       <Box
         component="form"
@@ -68,49 +35,17 @@ const CarsList = () => {
         }}
         noValidate
         autoComplete="off">
-        <TextField
-          value={search}
-          color="secondary"
-          onChange={e => setSearch(e.target.value)}
-          label="I am Looking for..."
-          variant="outlined"
-          margin="normal"
-        />
-        <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
-          <Typography>Filter by Price</Typography>
-          <Slider
-            style={{ color: "white" }}
-            getAriaLabel={() => "Temperature range"}
-            color="secondary"
-            value={price}
-            onChange={(e, value) => {
-              setPrice(value);
-            }}
-            valueLabelDisplay="auto"
-            min={0}
-            max={10000000}
-            step={50000}
-          />
+        <Button onClick={() => navigate("/all-cars")}>All Cars</Button>
+      </Box>
+      <Slider {...settings}>
+        <Box style={{ height: "30vh" }}>
+          {/* {cars.map(item => ( */}
+          <CardMeta />
+          {/* key={item.id} item={item}  */}
+          {/* ))} */}
         </Box>
-      </Box>
-
-      <Box marginTop="50px">
-        {cars.map(item => (
-          <CarCard key={item.id} item={item} />
-        ))}
-      </Box>
-      <Box>
-        <Pagination
-          onChange={(event, page) => {
-            setCurrentPage(page);
-          }}
-          page={currentPage}
-          count={pages}
-          color="primary"
-        />
-      </Box>
+      </Slider>
     </Container>
-    // {/* </ThemeProvider> */}
   );
 };
 

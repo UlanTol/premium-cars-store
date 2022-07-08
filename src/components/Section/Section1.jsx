@@ -10,7 +10,7 @@ const Section1 = () => {
   return (
     <div
       className="main3"
-      style={{ color: "black", width: "100%", height: "100%" }}>
+      style={{ color: "white", width: "100vw", height: "100%" }}>
       <div
         style={{
           color: "white",
@@ -25,7 +25,7 @@ const Section1 = () => {
             fontSize: "30px",
             fontWeight: "200",
             fontFamily: "sans-serif",
-            color: "black",
+            color: "white",
             marginTop: "35px",
           }}>
           Mustang Mach1
@@ -36,15 +36,15 @@ const Section1 = () => {
             fontSize: "3em",
             marginBottom: "5px",
             fontFamily: "sans-serif",
-            color: "black",
+            color: "white",
           }}>
           Love the power.Love the price.
         </Title>
         <div
-          style={{ display: "flex", marginTop: "30px" }}
+          style={{ display: "flex", marginTop: "10px" }}
           className="site-button-ghost-wrapper">
           <Button
-            style={{}}
+            style={{ color: "white" }}
             onClick={() => navigate("/cars")}
             type="link"
             ghost>

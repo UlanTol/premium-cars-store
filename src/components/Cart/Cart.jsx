@@ -77,10 +77,12 @@ export default function Cart() {
         </Table>
       </TableContainer>
       <Box marginTop="10px">
-        <Typography variant="h5">Total, €: {cart.totalPrice} </Typography>
+        <Typography style={{ color: "white" }} variant="h5">
+          Total, €: {cart.totalPrice}{" "}
+        </Typography>
       </Box>
       <Box marginTop="40px">
-        <Typography variant="h5" marginRight="20px">
+        <Typography style={{ color: "white" }} variant="h5" marginRight="20px">
           Checkout and proceed with Payment
         </Typography>
         <ShoppingCartCheckoutTwoToneIcon fontSize="large" />

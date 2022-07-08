@@ -48,7 +48,12 @@ export default function ElevateAppBar(props) {
       <CssBaseline />
       <ElevationScroll {...props}>
         <AppBar>
-          <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
+          <Toolbar
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100vw",
+            }}>
             <nav role="navigation">
               <div id="menuToggle">
                 <input type="checkbox" />
@@ -88,6 +93,9 @@ export default function ElevateAppBar(props) {
                   <Link to="/cars">
                     <li>Cars</li>
                   </Link>
+                  <Link to="/address">
+                    <li>Address</li>
+                  </Link>
                   <Link to="/about">
                     <li>About Us</li>
                   </Link>
@@ -114,16 +122,6 @@ export default function ElevateAppBar(props) {
                 </Badge>
               </IconButton>
             </Box>
-            {/* <Box>
-              <ShoppingCartIcon
-                onClick={() => navigate("/cart")}
-                style={{ fontSize: "30px" }}
-              />
-              <Typography
-                onClick={() => navigate("/cart")}
-                variant="h1"
-                component="div"></Typography>
-            </Box> */}
           </Toolbar>
         </AppBar>
       </ElevationScroll>
