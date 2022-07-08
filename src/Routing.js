@@ -27,13 +27,12 @@ const Routing = () => {
       <Route path="/about" element={<AboutUs />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/login" element={<Profile />} />
-<<<<<<< HEAD
+
       <Route path="/address" element={<Map />} />
-=======
+
       <Route path="/order" element={<OrderForm />} />
       <Route path="/payment" element={<PaymentForm />} />
       <Route path="/thank-you" element={<ThankYou />} />
->>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
     </Routes>
   );
 };

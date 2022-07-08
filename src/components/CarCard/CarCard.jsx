@@ -31,7 +31,6 @@ export default function CarCard({ item }) {
         flexWrap: "wrap",
         textAlign: "center",
       }}>
-<<<<<<< HEAD
       <CardMedia
         // style={{ width: "30px" }}
         component="img"
@@ -39,8 +38,6 @@ export default function CarCard({ item }) {
         image={item.image}
         alt="car"
       />
-=======
->>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {item.title}

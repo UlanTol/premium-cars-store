@@ -1,26 +1,20 @@
-<<<<<<< HEAD
 import { Box, Button, Container } from "@mui/material";
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-=======
 import {
-  Box,
-  Container,
   createTheme,
   Pagination,
-  Slider,
+  // Slider,
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
->>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
 import { carsContext } from "../../contexts/cars.Context";
 
-<<<<<<< HEAD
 import Slider from "react-slick";
 import CardMeta from "../CardMeta/CardMeta";
-=======
+import CarCard from "../CarCard/CarCard";
 const CarsList = () => {
   const { getCars, cars, pages } = useContext(carsContext);
 
@@ -35,12 +29,11 @@ const CarsList = () => {
   );
 
   const [price, setPrice] = useState([1, 1000000]);
->>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
 
-const CarsList = () => {
+  // const CarsList = () => {
   const navigate = useNavigate();
 
-  const { getCars, cars, pages } = useContext(carsContext);
+  // const { getCars, cars, pages } = useContext(carsContext);
 
   const settings = {
     dots: true,
@@ -66,9 +59,7 @@ const CarsList = () => {
         }}
         noValidate
         autoComplete="off">
-<<<<<<< HEAD
         <Button onClick={() => navigate("/all-cars")}>All Cars</Button>
-=======
         <TextField
           value={search}
           color="secondary"
@@ -109,7 +100,6 @@ const CarsList = () => {
           count={pages}
           color="success"
         />
->>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
       </Box>
       <Slider {...settings}>
         <Box style={{ height: "30vh" }}>

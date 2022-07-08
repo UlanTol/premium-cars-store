@@ -82,13 +82,11 @@ export default function Cart() {
         </Typography>
       </Box>
       <Box marginTop="40px">
-<<<<<<< HEAD
         <Typography style={{ color: "white" }} variant="h5" marginRight="20px">
           Checkout and proceed with Payment
-=======
+        </Typography>
         <Typography variant="h5" marginRight="20px">
           Proceed with your Order Form:
->>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
         </Typography>
         <Button
           variant="contained"

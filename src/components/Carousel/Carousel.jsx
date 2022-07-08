@@ -6,10 +6,7 @@ import Section from "../Section/Section";
 import Section1 from "../Section/Section1";
 import Section2 from "../Section/Section2";
 import InnerPage from "../InnerPage/InnerPage";
-<<<<<<< HEAD
-=======
 
->>>>>>> a0524e2c7161595fc527843c72519cacdf6e3a2f
 const Carousel1 = () => {
   const contentStyles = {
     height: "100vh",
