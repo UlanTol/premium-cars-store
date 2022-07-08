@@ -1,5 +1,7 @@
+import { Box, Button, ButtonBase } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import SendIcon from "@mui/icons-material/Send";
 
 const ThankYou = () => {
   const navigate = useNavigate();
@@ -28,11 +30,36 @@ const ThankYou = () => {
         please contact us by submitting your message
       </h2>
       <h2 style={{ color: "white" }}>
-        by clicking the "Support" button on the right side of this page.
+        by clicking{" "}
+        <Button
+          variant="outlined"
+          color="error"
+          size="large"
+          style={{ marginLeft: "10px" }}
+          onClick={() => navigate("/footer")}
+          endIcon={<SendIcon />}>
+          Support
+        </Button>{" "}
       </h2>
 
       <h2 style={{ marginTop: "20px", color: "white" }}>Sincerely Yours,</h2>
       <h1 style={{ color: "white" }}>"Premium Cars" AG</h1>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: "50px",
+        }}>
+        <Button
+          variant="contained"
+          color="warning"
+          size="large"
+          onClick={() => navigate("/all-cars")}
+          endIcon={<SendIcon />}>
+          Back to Shop
+        </Button>
+      </Box>
     </div>
   );
 };

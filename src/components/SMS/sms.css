@@ -1,5 +1,5 @@
 #text {
-  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   color: rgb(255, 255, 255);
   margin: 76px 1px 1px auto;
 }
@@ -16,7 +16,7 @@
   letter-spacing: normal;
   line-height: normal;
   text-decoration: none;
-  vertical-align: baseline;
+
   white-space: normal;
   word-spacing: normal;
   background-repeat: repeat-x;

@@ -57,7 +57,6 @@ export default function ElevateAppBar(props) {
             <nav role="navigation">
               <div id="menuToggle">
                 <input type="checkbox" />
-
                 <span></span>
                 <span></span>
                 <span></span>
@@ -112,7 +111,6 @@ export default function ElevateAppBar(props) {
                 color: "white",
               }}
             />
-
             <Box sx={{ flexGrow: 0 }}>
               <IconButton
                 onClick={() => navigate("/cart")}

@@ -4,6 +4,7 @@ import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { carsContext } from "../../contexts/cars.Context";
 import Loader from "../Loader/Loader";
+import SendIcon from "@mui/icons-material/Send";
 
 const Details = () => {
   const { id } = useParams();
@@ -15,7 +16,7 @@ const Details = () => {
   }, []);
 
   function handleBack() {
-    navigate("/cars");
+    navigate("/all-cars");
   }
 
   return oneCar ? (
@@ -45,8 +46,18 @@ const Details = () => {
           alt="car"
         />
       </Box>
-      <Box marginTop="30px">
-        <Button onClick={handleBack} variant="contained" color="secondary">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: "50px",
+        }}>
+        <Button
+          onClick={handleBack}
+          variant="contained"
+          color="secondary"
+          endIcon={<SendIcon />}>
           Back
         </Button>
       </Box>
