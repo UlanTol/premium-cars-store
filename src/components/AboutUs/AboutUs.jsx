@@ -2,6 +2,7 @@ import { Button, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import SendIcon from "@mui/icons-material/Send";
 
 const AboutUs = () => {
   const navigate = useNavigate();
@@ -54,8 +55,13 @@ const AboutUs = () => {
         </Typography>
       </Box>
       <Box marginTop="30px">
-        <Button color="secondary" onClick={() => navigate("/cars")}>
-          Choose a Car
+        <Button
+          variant="contained"
+          color="warning"
+          size="large"
+          onClick={() => navigate("/all-cars")}
+          endIcon={<SendIcon />}>
+          Let us Drive You to Our Shop
         </Button>
       </Box>
     </Container>

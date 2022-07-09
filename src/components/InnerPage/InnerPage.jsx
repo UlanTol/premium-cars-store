@@ -39,7 +39,7 @@ const InnerPage = () => {
             fontFamily: "sans-serif",
             color: "black",
           }}>
-          Speed.Power.Energy.
+          Speed. Power. Energy.
         </Title>
         <div
           style={{ display: "flex", marginTop: "10px" }}
@@ -49,7 +49,7 @@ const InnerPage = () => {
             onClick={() => navigate("/cars")}
             type="link"
             ghost>
-            Drive to Shop...
+            See More...
           </Button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "../Section/Style.css";
-import { Button, Space, Typography } from "antd";
+import { Button, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const { Title } = Typography;
@@ -38,7 +38,7 @@ const Section1 = () => {
             fontFamily: "sans-serif",
             color: "white",
           }}>
-          Love the power.Love the price.
+          Love the power. Love the price.
         </Title>
         <div
           style={{ display: "flex", marginTop: "10px" }}

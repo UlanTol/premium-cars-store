@@ -64,7 +64,7 @@
       "id": 9
     },
     {
-      "title": "Mercedes-Maybach 6 Cabriolet",
+      "title": "Mercedes-Maybach 6 ",
       "price": 99990,
       "description": " Breathtaking proportions and a luxurious haute-couture interior",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg/1200px-Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg",
@@ -142,7 +142,7 @@
     },
     {
       "title": "Tesla",
-      "price": 99999,
+      "price": "99900",
       "description": "Model S Plaid to Pininfirina Battista",
       "image": "https://assets.gqindia.com/photos/60e828e678863c66ba52c6ac/master/pass/Pininfarina-Battista.jpeg",
       "id": 21

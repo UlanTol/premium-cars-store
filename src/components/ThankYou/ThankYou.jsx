@@ -1,6 +1,11 @@
+import { Box, Button, ButtonBase } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import SendIcon from "@mui/icons-material/Send";
 
 const ThankYou = () => {
+  const navigate = useNavigate();
+
   return (
     <div
       style={{
@@ -9,19 +14,52 @@ const ThankYou = () => {
         flexDirection: "column",
         textAlign: "center",
       }}>
-      <h1 style={{ marginTop: "40px" }}>Dear Customer!</h1>
+      <h1 style={{ marginTop: "40px", color: "white" }}>Dear Customer!</h1>
 
-      <h2 style={{ marginTop: "20px" }}>Thank You for your purchase!</h2>
-      <h2>Your Order has been placed successfully.</h2>
-      <h2>We will contact you soon!</h2>
-      <h2 style={{ marginTop: "30px" }}>
+      <h2 style={{ marginTop: "20px", color: "white" }}>
+        Thank You for your purchase!
+      </h2>
+      <h2 style={{ color: "white" }}>
+        Your Order has been placed successfully.
+      </h2>
+      <h2 style={{ color: "white" }}>We will contact you soon!</h2>
+      <h2 style={{ marginTop: "30px", color: "white" }}>
         If you need help or you have a question,
       </h2>
-      <h2>please contact us by submitting your message </h2>
-      <h2>in the 'Get in Touch' form given in the Footer of our web-site.</h2>
+      <h2 style={{ color: "white" }}>
+        please contact us by submitting your message
+      </h2>
+      <h2 style={{ color: "white" }}>
+        by clicking{" "}
+        <Button
+          variant="outlined"
+          color="error"
+          size="large"
+          style={{ marginLeft: "10px" }}
+          onClick={() => navigate("/footer")}
+          endIcon={<SendIcon />}>
+          Support
+        </Button>{" "}
+      </h2>
 
-      <h2 style={{ marginTop: "20px" }}>Sincerely Yours,</h2>
-      <h1>"Premium Cars" AG</h1>
+      <h2 style={{ marginTop: "20px", color: "white" }}>Sincerely Yours,</h2>
+      <h1 style={{ color: "white" }}>"Premium Cars" AG</h1>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: "50px",
+        }}>
+        <Button
+          variant="contained"
+          color="warning"
+          size="large"
+          onClick={() => navigate("/all-cars")}
+          endIcon={<SendIcon />}>
+          Back to Shop
+        </Button>
+      </Box>
     </div>
   );
 };

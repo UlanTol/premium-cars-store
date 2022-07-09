@@ -28,7 +28,10 @@ const Footer = () => {
   return (
     <footer>
       <div
-        style={{ marginTop: "90px", borderTop: "2px solid white" }}
+        style={{
+          marginTop: "90px",
+          borderTop: "2px solid white",
+        }}
         className="f-item-con">
         <div className="app-info">
           <span className="app-name">
@@ -42,11 +45,11 @@ const Footer = () => {
           <div className="footer-title">Useful Links</div>
           <ul>
             <li onClick={() => navigate("/")}>Main</li>
-            <li onClick={() => navigate("/cars")}>Shop</li>
+            <li onClick={() => navigate("/all-cars")}>Shop</li>
             <li
               onClick={() => {
                 loginWithRedirect();
-                navigate("/cars");
+                navigate("/all-cars");
               }}>
               Sign In
             </li>{" "}
@@ -58,14 +61,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="help-sec">
-          <div className="footer-title">Help</div>
-          <ul>
-            <li>Help Me</li>
-            <li>Feedback</li>
-            <li>Report an Issue / Bug</li>
-          </ul>
-        </div>
+
         <div className="g-i-t">
           <div className="footer-title">Get in Touch</div>
           <form action="/" method="post" className="space-y-2">

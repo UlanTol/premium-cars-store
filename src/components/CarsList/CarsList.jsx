@@ -1,39 +1,14 @@
 import { Box, Button, Container } from "@mui/material";
-import React, { useContext } from "react";
+import { Typography } from "antd";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  createTheme,
-  Pagination,
-  // Slider,
-  TextField,
-  Typography,
-} from "@mui/material";
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { carsContext } from "../../contexts/cars.Context";
 
 import Slider from "react-slick";
 import CardMeta from "../CardMeta/CardMeta";
-import CarCard from "../CarCard/CarCard";
+import Footer from "../Footer/Footer";
+
 const CarsList = () => {
-  const { getCars, cars, pages } = useContext(carsContext);
-
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const [search, setSearch] = useState(
-    searchParams.get("q") ? searchParams.get("q") : ""
-  );
-
-  const [currentPage, setCurrentPage] = useState(
-    searchParams.get("_page") ? +searchParams.get("_page") : 1
-  );
-
-  const [price, setPrice] = useState([1, 1000000]);
-
-  // const CarsList = () => {
   const navigate = useNavigate();
-
-  // const { getCars, cars, pages } = useContext(carsContext);
 
   const settings = {
     dots: true,
@@ -51,6 +26,25 @@ const CarsList = () => {
   return (
     <Container>
       <Box
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "30px",
+        }}>
+        <Typography style={{ color: "gold", fontSize: "50px" }}>
+          Premium Cars AG
+        </Typography>
+        <Typography style={{ color: "white", fontSize: "20px" }}>
+          With over 80 years of combined experience, we can make your dreams
+          become a reality.
+        </Typography>
+      </Box>
+      <Slider {...settings}>
+        <Box>
+          <CardMeta />
+        </Box>
+      </Slider>
+      <Box
         component="form"
         sx={{
           "& > :not(style)": { m: 1, width: "50ch" },
@@ -59,56 +53,15 @@ const CarsList = () => {
         }}
         noValidate
         autoComplete="off">
-        <Button onClick={() => navigate("/all-cars")}>All Cars</Button>
-        <TextField
-          value={search}
-          color="secondary"
-          onChange={e => setSearch(e.target.value)}
-          label="I am Looking for..."
+        <Button
           variant="outlined"
-          margin="normal"
-        />
-        <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
-          <Typography>Filter by Price</Typography>
-          <Slider
-            style={{ color: "secondary" }}
-            getAriaLabel={() => "Price range"}
-            color="secondary"
-            value={price}
-            onChange={(e, value) => {
-              setPrice(value);
-            }}
-            valueLabelDisplay="auto"
-            min={0}
-            max={1000000}
-            step={50000}
-          />
-        </Box>
+          color="warning"
+          onClick={() => navigate("/all-cars")}>
+          Let's drive to our Shop
+        </Button>
       </Box>
 
-      <Box marginTop="50px">
-        {cars.map(item => (
-          <CarCard key={item.id} item={item} />
-        ))}
-      </Box>
-      <Box>
-        <Pagination
-          onChange={(event, page) => {
-            setCurrentPage(page);
-          }}
-          page={currentPage}
-          count={pages}
-          color="success"
-        />
-      </Box>
-      <Slider {...settings}>
-        <Box style={{ height: "30vh" }}>
-          {/* {cars.map(item => ( */}
-          <CardMeta />
-          {/* key={item.id} item={item}  */}
-          {/* ))} */}
-        </Box>
-      </Slider>
+      <Footer />
     </Container>
   );
 };

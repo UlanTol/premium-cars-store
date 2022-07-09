@@ -10,7 +10,6 @@ import { Rings } from "react-loader-spinner";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box } from "@mui/system";
 import Auth0ProviderWithHistory from "./contexts/auth0Provider";
-import Footer from "./components/Footer/Footer";
 import SMS from "./components/SMS/SMS";
 
 const darkTheme = createTheme({
@@ -53,7 +52,6 @@ const App = () => {
               ) : (
                 <Routing />
               )}
-              <Footer />
             </ThemeProvider>
           </Auth0ProviderWithHistory>
         </BrowserRouter>
