@@ -8,12 +8,6 @@ const AboutUs = () => {
   const navigate = useNavigate();
   return (
     <Container sx={{ marginTop: "30px" }}>
-      <Box>
-        <Typography variant="h4" color={"gold"}>
-          ABOUT US
-        </Typography>
-      </Box>
-
       <Box sx={{ marginTop: "20px" }}>
         <Typography variant="h6" color={"white"}>
           Sports cars are our passion - and because we would like to share this

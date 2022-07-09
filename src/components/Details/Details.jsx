@@ -24,7 +24,8 @@ const Details = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: "80vh",
+        height: "50vh",
+        width: "60vw",
         backgroundColor: "white",
         borderRadius: "10px",
       }}>
@@ -42,7 +43,7 @@ const Details = () => {
         <img
           src={oneCar.image}
           style={{ borderRadius: "20px", marginTop: "20px" }}
-          width="50%"
+          width="600px"
           alt="car"
         />
       </Box>

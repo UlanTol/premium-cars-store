@@ -27,7 +27,6 @@ const App = () => {
     }, 2000);
   });
   return (
-
     <CommentsContextProvider>
       <CartContextProvider>
         <CarsContextProvider>
@@ -55,14 +54,12 @@ const App = () => {
                 ) : (
                   <Routing />
                 )}
-                <Footer />
               </ThemeProvider>
             </Auth0ProviderWithHistory>
           </BrowserRouter>
         </CarsContextProvider>
       </CartContextProvider>
     </CommentsContextProvider>
-
   );
 };
 

@@ -26,7 +26,7 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer>
+    <footer className="footer">
       <div
         style={{
           marginTop: "90px",

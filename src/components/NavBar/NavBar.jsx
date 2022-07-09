@@ -47,7 +47,7 @@ export default function ElevateAppBar(props) {
     <React.Fragment>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar>
+        <AppBar className="navbar" id="navbar">
           <Toolbar
             style={{
               display: "flex",
