@@ -40,9 +40,9 @@ const CommentBox = () => {
       }}
       noValidate
       autoComplete="off">
-      <h2 style={{ color: "gold", marginBottom: "20px" }}>
-        Leave your feedback or comment here
-      </h2>
+      <h3 style={{ color: "gold", marginBottom: "20px" }}>
+        Write your feedback/comment below
+      </h3>
 
       <TextField
         id="input-with-icon-textfield"
@@ -62,13 +62,6 @@ const CommentBox = () => {
         label="Type your comment here"
         value={comment}
         onChange={e => setComment(e.target.value)}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <AccountCircle />
-            </InputAdornment>
-          ),
-        }}
       />
       <Button
         variant="contained"

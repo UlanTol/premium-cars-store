@@ -36,7 +36,6 @@ export default function CarCard({ item }) {
       <Card
         className="card"
         sx={{
-          // maxWidth: "360px",
           margin: "20px",
           flexWrap: "wrap",
           textAlign: "center",
@@ -44,7 +43,6 @@ export default function CarCard({ item }) {
         <CardMedia
           style={{ height: "20vh" }}
           component="img"
-          // height="140"
           image={item.image}
           alt="car"
         />

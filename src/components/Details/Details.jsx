@@ -15,17 +15,12 @@ const Details = () => {
     getOneCar(id);
   }, []);
 
-  function handleBack() {
-    navigate("/all-cars");
-  }
-
   return oneCar ? (
     <Container
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: "50vh",
-        width: "60vw",
+        height: "80vh",
         backgroundColor: "white",
         borderRadius: "10px",
       }}>
@@ -43,7 +38,7 @@ const Details = () => {
         <img
           src={oneCar.image}
           style={{ borderRadius: "20px", marginTop: "20px" }}
-          width="600px"
+          width="50%"
           alt="car"
         />
       </Box>
@@ -55,7 +50,7 @@ const Details = () => {
           marginTop: "50px",
         }}>
         <Button
-          onClick={handleBack}
+          onClick={() => navigate("/all-cars")}
           variant="contained"
           color="secondary"
           endIcon={<SendIcon />}>

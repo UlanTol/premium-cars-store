@@ -2,7 +2,7 @@
   "cars": [
     {
       "title": "Ferrari LaFerrari",
-      "price": 90000,
+      "price": "900000",
       "description": "The limited edition LaFerrari",
       "image": "https://www.esotericdetail.com/wp-content/uploads/2021/06/ferrari-laferrari-paint-protection-film-esoteric-detail-1080x675.jpg",
       "id": 3
@@ -16,7 +16,7 @@
     },
     {
       "title": "FERRARI 488 SPIDER",
-      "price": 200000,
+      "price": "2000000",
       "description": "The result is the most powerful and innovative Ferrari Spider ever built",
       "image": "https://65e81151f52e248c552b-fe74cd567ea2f1228f846834bd67571e.ssl.cf1.rackcdn.com/Ferrari/Model%20Pages/488%20Spider/ferrari-488-spider-red-driving.jpg",
       "id": 4
@@ -58,7 +58,7 @@
     },
     {
       "title": "Mercedes-Maybach 6 ",
-      "price": 99990,
+      "price": "1999990",
       "description": " Breathtaking proportions and a luxurious haute-couture interior",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg/1200px-Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg",
       "id": 2
@@ -93,7 +93,7 @@
     },
     {
       "title": "Bigatti Veyron",
-      "price": 78900,
+      "price": "1778900",
       "description": "The Bugatti Veyron EB 16.4 is a mid-engine sports car",
       "image": "https://первыйрай.рф/wp-content/uploads/bugatti-veyron.jpg",
       "id": 15
@@ -213,6 +213,46 @@
       "nick": "Madonna",
       "comment": "Guys, well done!",
       "id": 7
+    },
+    {
+      "nick": "Jason Statham",
+      "comment": "Well done, Bro",
+      "id": 8
+    },
+    {
+      "nick": "Mark Zuckerberg",
+      "comment": "Awesome. Come and join our team",
+      "id": 9
+    },
+    {
+      "nick": "Elon Mask",
+      "comment": "I offer you a job. Write me back",
+      "id": 10
+    },
+    {
+      "nick": "Steve Jobs",
+      "comment": "Come to Apple",
+      "id": 11
+    },
+    {
+      "nick": "Christian Grey",
+      "comment": "I've got an offer 4 ya",
+      "id": 12
+    },
+    {
+      "nick": "Recruiter ",
+      "comment": "We've been looking for you for ages",
+      "id": 13
+    },
+    {
+      "nick": "Advanced Front-end Dev",
+      "comment": "Yo, U R gr8",
+      "id": 14
+    },
+    {
+      "nick": "Bill Gates",
+      "comment": "C'mon, let's go with us",
+      "id": 15
     }
   ]
 }

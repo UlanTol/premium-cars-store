@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -28,7 +28,7 @@ const OrderForm = () => {
 
   return (
     <Container>
-      <div
+      <Box
         style={{
           display: "flex",
           flexDirection: "column",
@@ -124,7 +124,7 @@ const OrderForm = () => {
           endIcon={<SendIcon />}>
           Submit / Proceed to Payment
         </Button>
-      </div>
+      </Box>
     </Container>
   );
 };

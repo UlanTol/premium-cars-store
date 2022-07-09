@@ -97,7 +97,7 @@ h2 {
   cursor: pointer;
 }
 
-img {
+.supportImage {
   width: 45px;
   height: 45px;
   filter: hue-rotate(220deg) drop-shadow(2px 4px 4px #0006);
@@ -117,7 +117,7 @@ img:active {
 .form-item {
   position: relative;
 }
-
+/* 
 label,
 input,
 textarea {
@@ -125,7 +125,6 @@ textarea {
 }
 
 label {
-  position: absolute;
   top: 10px;
   left: 2%;
   color: #999;
@@ -153,7 +152,7 @@ textarea:valid + label {
   color: #777;
   top: -20px;
   transition: all 0.225s ease;
-}
+} */
 
 .submit-btn:active {
   transform: scale(1.1, 1.1);

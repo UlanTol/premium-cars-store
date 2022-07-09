@@ -21,7 +21,7 @@ const CommentsList = () => {
         justifyContent: "center",
         marginTop: "30px",
       }}>
-      <h2 style={{ color: "gold" }}>Feedbacks and Comments</h2>
+      <h3 style={{ color: "gold" }}>Feedbacks and Comments</h3>
       {comments.map(item => (
         <div key={item.id}>
           {item.nick} wrote: {item.comment}{" "}

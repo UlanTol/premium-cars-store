@@ -82,7 +82,7 @@ const AllCarsList = () => {
               margin="normal"
             />
           </Box>
-          {/* <Typography id="filter">Filter by Price</Typography> */}
+
           <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
             <Slider
               id="slider"
