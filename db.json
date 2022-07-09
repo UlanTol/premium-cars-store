@@ -182,5 +182,37 @@
       "image": "https://avatars.mds.yandex.net/get-verba/216201/2a0000017ca79375ea5a3de5792bc7247c67/cattouchret",
       "id": 27
     }
+  ],
+  "comments": [
+    {
+      "nick": "Ruslan",
+      "comment": "Hi there. Good job, fella!",
+      "id": 1
+    },
+    {
+      "nick": "Axel",
+      "comment": "Bonjour. Awesome",
+      "id": 2
+    },
+    {
+      "nick": "John",
+      "comment": "Buon jorno",
+      "id": 4
+    },
+    {
+      "nick": "Alex",
+      "comment": "Good Day",
+      "id": 5
+    },
+    {
+      "nick": "Nick",
+      "comment": "Awesome!",
+      "id": 6
+    },
+    {
+      "nick": "Madonna",
+      "comment": "Guys, well done!",
+      "id": 7
+    }
   ]
 }

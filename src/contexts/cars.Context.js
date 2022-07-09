@@ -36,7 +36,7 @@ const CarsContextProvider = ({ children }) => {
 
   //! Read
   async function getCars() {
-    const res = await axios(`${CARS_API}${window.location.search}`);
+    const res = await axios(`${CARS_API}/${window.location.search}`);
     dispatch({
       type: "GET_CARS",
       payload: res,
