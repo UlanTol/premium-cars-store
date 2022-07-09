@@ -7,12 +7,14 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { carsContext } from "../../contexts/cars.Context";
 import { useNavigate } from "react-router-dom";
-import { IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { cartContext } from "../../contexts/cartContext";
-import { Rating } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+
+import { FrownOutlined, MehOutlined, SmileOutlined } from "@ant-design/icons";
+import { Rate } from "antd";
 
 export default function CarCard({ item }) {
   const { deleteCar } = React.useContext(carsContext);
@@ -21,15 +23,29 @@ export default function CarCard({ item }) {
   const [carState, setCarState] = React.useState(checkCarInCart(item.id));
   const [fav, setFav] = React.useState(false);
 
+  const customIcons = {
+    1: <FrownOutlined />,
+    2: <FrownOutlined />,
+    3: <MehOutlined />,
+    4: <SmileOutlined />,
+    5: <SmileOutlined />,
+  };
+
   return (
     <Card
       sx={{
-        maxWidth: "360px",
+        // maxWidth: "360px",
         margin: "20px",
         flexWrap: "wrap",
         textAlign: "center",
       }}>
-      <CardMedia component="img" height="140" image={item.image} alt="car" />
+      <CardMedia
+        style={{ height: "20vh" }}
+        component="img"
+        // height="140"
+        image={item.image}
+        alt="car"
+      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {item.title}
@@ -39,30 +55,33 @@ export default function CarCard({ item }) {
         </Typography>
       </CardContent>
 
-      <Rating name="size-small" defaultValue={5} />
-      <br />
+      <Box style={{ display: "flex", flexDirection: "column" }}>
+        <Rate
+          defaultValue={3}
+          character={({ index }) => customIcons[index + 1]}
+        />
 
-      {!fav && (
-        <IconButton
-          onClick={() => {
-            setFav(!fav);
-          }}
-          aria-label="delete"
-          color="secondary">
-          <FavoriteBorderIcon></FavoriteBorderIcon>
-        </IconButton>
-      )}
-      {fav && (
-        <IconButton
-          onClick={() => {
-            setFav(!fav);
-          }}
-          aria-label="delete"
-          color="error">
-          <FavoriteIcon></FavoriteIcon>
-        </IconButton>
-      )}
-
+        {!fav && (
+          <IconButton
+            onClick={() => {
+              setFav(!fav);
+            }}
+            aria-label="delete"
+            color="secondary">
+            <FavoriteBorderIcon></FavoriteBorderIcon>
+          </IconButton>
+        )}
+        {fav && (
+          <IconButton
+            onClick={() => {
+              setFav(!fav);
+            }}
+            aria-label="delete"
+            color="error">
+            <FavoriteIcon></FavoriteIcon>
+          </IconButton>
+        )}
+      </Box>
       <CardActions>
         <Button
           size="small"

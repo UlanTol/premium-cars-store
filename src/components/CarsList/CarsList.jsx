@@ -1,9 +1,11 @@
 import { Box, Button, Container } from "@mui/material";
+import { Typography } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import Slider from "react-slick";
 import CardMeta from "../CardMeta/CardMeta";
+import Footer from "../Footer/Footer";
 
 const CarsList = () => {
   const navigate = useNavigate();
@@ -24,6 +26,25 @@ const CarsList = () => {
   return (
     <Container>
       <Box
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "30px",
+        }}>
+        <Typography style={{ color: "gold", fontSize: "50px" }}>
+          Premium Cars AG
+        </Typography>
+        <Typography style={{ color: "white", fontSize: "20px" }}>
+          With over 80 years of combined experience, we can make your dreams
+          become a reality.
+        </Typography>
+      </Box>
+      <Slider {...settings}>
+        <Box>
+          <CardMeta />
+        </Box>
+      </Slider>
+      <Box
         component="form"
         sx={{
           "& > :not(style)": { m: 1, width: "50ch" },
@@ -40,11 +61,7 @@ const CarsList = () => {
         </Button>
       </Box>
 
-      <Slider {...settings}>
-        <Box style={{ height: "30vh" }}>
-          <CardMeta />
-        </Box>
-      </Slider>
+      <Footer />
     </Container>
   );
 };

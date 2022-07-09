@@ -10,6 +10,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { carsContext } from "../../contexts/cars.Context";
 import CarCard from "../CarCard/CarCard";
+import Footer from "../Footer/Footer";
 
 const AllCarsList = () => {
   const { getCars, cars, pages } = useContext(carsContext);
@@ -96,6 +97,7 @@ const AllCarsList = () => {
           color="warning"
         />
       </Box>
+      <Footer />
     </Container>
   );
 };

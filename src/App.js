@@ -10,7 +10,6 @@ import { Rings } from "react-loader-spinner";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box } from "@mui/system";
 import Auth0ProviderWithHistory from "./contexts/auth0Provider";
-import Footer from "./components/Footer/Footer";
 import SMS from "./components/SMS/SMS";
 import CommentsContextProvider from "./contexts/commentsContext";
 
@@ -28,6 +27,7 @@ const App = () => {
     }, 2000);
   });
   return (
+
     <CommentsContextProvider>
       <CartContextProvider>
         <CarsContextProvider>
@@ -62,6 +62,7 @@ const App = () => {
         </CarsContextProvider>
       </CartContextProvider>
     </CommentsContextProvider>
+
   );
 };
 
