@@ -47,8 +47,7 @@ const InnerPage = () => {
           <Button
             style={{ height: "30px", color: "black" }}
             onClick={() => navigate("/cars")}
-            type="link"
-            ghost>
+            type="link">
             See More...
           </Button>
         </div>

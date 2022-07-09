@@ -1,6 +1,6 @@
 import React from "react";
 import "../Section/Style.css";
-import { Button, Space, Typography } from "antd";
+import { Button, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const { Title } = Typography;
@@ -41,11 +41,7 @@ const Section2 = () => {
         <div
           style={{ display: "flex", marginTop: "20px" }}
           className="site-button-ghost-wrapper">
-          <Button
-            style={{}}
-            onClick={() => navigate("/cars")}
-            type="link"
-            ghost>
+          <Button style={{}} onClick={() => navigate("/cars")} type="link">
             Learn more
           </Button>
         </div>

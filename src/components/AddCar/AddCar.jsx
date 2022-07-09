@@ -20,7 +20,7 @@ const AddCar = () => {
       image,
     };
     if (!title.trim("") || !description.trim("") || !image.trim("") || !price) {
-      alert("Please complete all inputs!");
+      alert("Please complete all the inputs!");
     } else {
       addCar(newCar);
       navigate("/cars");
@@ -30,7 +30,9 @@ const AddCar = () => {
   return (
     <Container maxWidth="sm">
       <Box display={"flex"} flexDirection={"column"} marginTop={"30px"}>
-        <Typography variant="h4">Add a Car</Typography>
+        <Typography variant="h4" marginBottom={"20px"} textAlign={"center"}>
+          Add a Vehicle
+        </Typography>
         <TextField
           id="outlined-basic"
           label="Title"

@@ -97,6 +97,9 @@ export default function ElevateAppBar(props) {
                   <Link to="/address">
                     <li>Address</li>
                   </Link>
+                  <Link to="/comments">
+                    <li>Feedbacks</li>
+                  </Link>
                   <Link to="/about">
                     <li>About Us</li>
                   </Link>
