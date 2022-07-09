@@ -13,6 +13,9 @@ import Carousel1 from "./components/Carousel/Carousel";
 import PaymentForm from "./components/PaymentForm/PaymentForm";
 import OrderForm from "./components/OrderForm/OrderForm";
 import ThankYou from "./components/ThankYou/ThankYou";
+import CommentsList from "./components/CommentsList/CommentsList";
+import AddComment from "./components/AddComment/AddComment";
+import EditComment from "./components/EditComment/EditComment";
 
 const Routing = () => {
   return (
@@ -30,6 +33,9 @@ const Routing = () => {
       <Route path="/order" element={<OrderForm />} />
       <Route path="/payment" element={<PaymentForm />} />
       <Route path="/thank-you" element={<ThankYou />} />
+      <Route path="/comments" element={<CommentsList />} />
+      <Route path="/add-comment/" element={<AddComment />} />
+      <Route path="/edit-comment/:id" element={<EditComment />} />
     </Routes>
   );
 };

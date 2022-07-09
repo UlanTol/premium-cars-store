@@ -44,8 +44,7 @@ const Section = () => {
           <Button
             style={{ color: "white" }}
             onClick={() => navigate("/cars")}
-            type="link"
-            ghost>
+            type="link">
             See more
           </Button>
         </div>

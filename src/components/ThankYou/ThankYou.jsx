@@ -14,10 +14,10 @@ const ThankYou = () => {
         flexDirection: "column",
         textAlign: "center",
       }}>
-      <h1 style={{ marginTop: "40px", color: "white" }}>Dear Customer!</h1>
+      <h1 style={{ marginTop: "30px", color: "white" }}>Dear Customer,</h1>
 
       <h2 style={{ marginTop: "20px", color: "white" }}>
-        Thank You for your purchase!
+        Thank You very much for your purchase!
       </h2>
       <h2 style={{ color: "white" }}>
         Your Order has been placed successfully.
@@ -30,7 +30,7 @@ const ThankYou = () => {
         please contact us by submitting your message
       </h2>
       <h2 style={{ color: "white" }}>
-        by clicking{" "}
+        clicking here{" "}
         <Button
           variant="outlined"
           color="error"
@@ -41,15 +41,27 @@ const ThankYou = () => {
           Support
         </Button>{" "}
       </h2>
+      <h2 style={{ color: "white" }}>
+        and please leave your feedback/comment here:{" "}
+        <Button
+          variant="outlined"
+          color="warning"
+          size="large"
+          style={{ marginLeft: "10px" }}
+          onClick={() => navigate("/comment")}
+          endIcon={<SendIcon />}>
+          Your Feedback
+        </Button>{" "}
+      </h2>
 
       <h2 style={{ marginTop: "20px", color: "white" }}>Sincerely Yours,</h2>
-      <h1 style={{ color: "white" }}>"Premium Cars" AG</h1>
+      <h1 style={{ color: "gold" }}>"Premium Cars" AG</h1>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          marginTop: "50px",
+          marginTop: "30px",
         }}>
         <Button
           variant="contained"

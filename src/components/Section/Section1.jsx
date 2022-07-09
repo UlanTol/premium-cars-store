@@ -21,7 +21,6 @@ const Section1 = () => {
         }}>
         <Title
           style={{
-            // display: "block",
             fontSize: "30px",
             fontWeight: "200",
             fontFamily: "sans-serif",
@@ -46,8 +45,7 @@ const Section1 = () => {
           <Button
             style={{ color: "white" }}
             onClick={() => navigate("/cars")}
-            type="link"
-            ghost>
+            type="link">
             Learn more
           </Button>
         </div>

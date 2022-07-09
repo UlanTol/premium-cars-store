@@ -12,6 +12,7 @@ import { Box } from "@mui/system";
 import Auth0ProviderWithHistory from "./contexts/auth0Provider";
 import Footer from "./components/Footer/Footer";
 import SMS from "./components/SMS/SMS";
+import CommentsContextProvider from "./contexts/commentsContext";
 
 const darkTheme = createTheme({
   palette: {
@@ -27,38 +28,40 @@ const App = () => {
     }, 2000);
   });
   return (
-    <CartContextProvider>
-      <CarsContextProvider>
-        <BrowserRouter>
-          <Auth0ProviderWithHistory>
-            <ThemeProvider theme={darkTheme}>
-              <Navbar />
-              <SMS />
-              {loading == true ? (
-                <Box
-                  style={{
-                    width: "100vw",
-                    height: "100vh",
-                    display: "flex",
-                    marginTop: "30vh",
-                    justifyContent: "center",
-                  }}>
-                  <Rings
-                    height="200"
-                    // width=""
-                    color="white"
-                    ariaLabel="loading"
-                  />
-                </Box>
-              ) : (
-                <Routing />
-              )}
-              <Footer />
-            </ThemeProvider>
-          </Auth0ProviderWithHistory>
-        </BrowserRouter>
-      </CarsContextProvider>
-    </CartContextProvider>
+    <CommentsContextProvider>
+      <CartContextProvider>
+        <CarsContextProvider>
+          <BrowserRouter>
+            <Auth0ProviderWithHistory>
+              <ThemeProvider theme={darkTheme}>
+                <Navbar />
+                <SMS />
+                {loading == true ? (
+                  <Box
+                    style={{
+                      width: "100vw",
+                      height: "100vh",
+                      display: "flex",
+                      marginTop: "30vh",
+                      justifyContent: "center",
+                    }}>
+                    <Rings
+                      height="200"
+                      // width=""
+                      color="white"
+                      ariaLabel="loading"
+                    />
+                  </Box>
+                ) : (
+                  <Routing />
+                )}
+                <Footer />
+              </ThemeProvider>
+            </Auth0ProviderWithHistory>
+          </BrowserRouter>
+        </CarsContextProvider>
+      </CartContextProvider>
+    </CommentsContextProvider>
   );
 };
 

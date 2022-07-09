@@ -61,9 +61,24 @@ const Footer = () => {
         <div className="help-sec">
           <div className="footer-title">Help</div>
           <ul>
-            <li>Help Me</li>
-            <li>Feedback</li>
-            <li>Report an Issue / Bug</li>
+            <li
+              onClick={() => {
+                navigate("/add-comment");
+              }}>
+              Help Me
+            </li>
+            <li
+              onClick={() => {
+                navigate("/add-comment");
+              }}>
+              Feedback
+            </li>
+            <li
+              onClick={() => {
+                navigate("/add-comment");
+              }}>
+              Report an Issue / Bug
+            </li>
           </ul>
         </div>
         <div className="g-i-t">
