@@ -32,83 +32,86 @@ export default function CarCard({ item }) {
   };
 
   return (
-    <Card
-      sx={{
-        // maxWidth: "360px",
-        margin: "20px",
-        flexWrap: "wrap",
-        textAlign: "center",
-      }}>
-      <CardMedia
-        style={{ height: "20vh" }}
-        component="img"
-        // height="140"
-        image={item.image}
-        alt="car"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {item.title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Price: {item.price} €
-        </Typography>
-      </CardContent>
-
-      <Box style={{ display: "flex", flexDirection: "column" }}>
-        <Rate
-          defaultValue={3}
-          character={({ index }) => customIcons[index + 1]}
+    <Box className="card">
+      <Card
+        className="card"
+        sx={{
+          // maxWidth: "360px",
+          margin: "20px",
+          flexWrap: "wrap",
+          textAlign: "center",
+        }}>
+        <CardMedia
+          style={{ height: "20vh" }}
+          component="img"
+          // height="140"
+          image={item.image}
+          alt="car"
         />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {item.title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Price: {item.price} €
+          </Typography>
+        </CardContent>
 
-        {!fav && (
+        <Box style={{ display: "flex", flexDirection: "column" }}>
+          <Rate
+            defaultValue={3}
+            character={({ index }) => customIcons[index + 1]}
+          />
+
+          {!fav && (
+            <IconButton
+              onClick={() => {
+                setFav(!fav);
+              }}
+              aria-label="delete"
+              color="secondary">
+              <FavoriteBorderIcon></FavoriteBorderIcon>
+            </IconButton>
+          )}
+          {fav && (
+            <IconButton
+              onClick={() => {
+                setFav(!fav);
+              }}
+              aria-label="delete"
+              color="error">
+              <FavoriteIcon></FavoriteIcon>
+            </IconButton>
+          )}
+        </Box>
+        <CardActions>
+          <Button
+            size="small"
+            sx={{ color: "red" }}
+            onClick={() => deleteCar(item.id)}>
+            Delete
+          </Button>
+          <Button
+            size="small"
+            sx={{ color: "magenta" }}
+            onClick={() => navigate(`/edit/${item.id}`)}>
+            Update Car Info
+          </Button>
+          <Button
+            size="small"
+            sx={{ color: "lawngreen" }}
+            onClick={() => navigate(`/details/${item.id}`)}>
+            Details
+          </Button>
           <IconButton
             onClick={() => {
-              setFav(!fav);
-            }}
-            aria-label="delete"
-            color="secondary">
-            <FavoriteBorderIcon></FavoriteBorderIcon>
+              addToCart(item);
+              setCarState(checkCarInCart(item.id));
+            }}>
+            <AddShoppingCartIcon color={carState ? "secondary" : "warning"} />
           </IconButton>
-        )}
-        {fav && (
-          <IconButton
-            onClick={() => {
-              setFav(!fav);
-            }}
-            aria-label="delete"
-            color="error">
-            <FavoriteIcon></FavoriteIcon>
-          </IconButton>
-        )}
-      </Box>
-      <CardActions>
-        <Button
-          size="small"
-          sx={{ color: "red" }}
-          onClick={() => deleteCar(item.id)}>
-          Delete
-        </Button>
-        <Button
-          size="small"
-          sx={{ color: "magenta" }}
-          onClick={() => navigate(`/edit/${item.id}`)}>
-          Update Car Info
-        </Button>
-        <Button
-          size="small"
-          sx={{ color: "lawngreen" }}
-          onClick={() => navigate(`/details/${item.id}`)}>
-          Details
-        </Button>
-        <IconButton
-          onClick={() => {
-            addToCart(item);
-            setCarState(checkCarInCart(item.id));
-          }}>
-          <AddShoppingCartIcon color={carState ? "secondary" : "warning"} />
-        </IconButton>
-      </CardActions>
-    </Card>
+        </CardActions>
+      </Card>
+    </Box>
   );
 }

@@ -35,7 +35,7 @@ const EditCar = () => {
       image,
     };
     updateCarInfo(id, updatedCar);
-    navigate("/cars");
+    navigate("/all-cars");
   }
 
   return oneCar ? (

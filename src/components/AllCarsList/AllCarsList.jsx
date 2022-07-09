@@ -58,28 +58,46 @@ const AllCarsList = () => {
         }}
         noValidate
         autoComplete="off">
-        <TextField
-          value={search}
-          color="secondary"
-          onChange={e => setSearch(e.target.value)}
-          label="I am Looking for..."
-          variant="outlined"
-          margin="normal"
-        />
-        <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
-          <Typography>Filter by Price</Typography>
-          <Slider
-            getAriaLabel={() => "Temperature range"}
-            color="warning"
-            value={price}
-            onChange={(e, value) => {
-              setPrice(value);
+        <Box id="sen">
+          <Box
+            component="form"
+            id="search"
+            sx={{
+              "& > :not(style)": { m: 1, width: "50ch" },
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "30px",
+              alignItems: "center",
+              justifyContent: "space-evenly",
             }}
-            valueLabelDisplay="auto"
-            min={0}
-            max={10000000}
-            step={50000}
-          />
+            noValidate
+            autoComplete="off">
+            <TextField
+              style={{ width: "500px" }}
+              value={search}
+              color="secondary"
+              onChange={e => setSearch(e.target.value)}
+              label="I am Looking for..."
+              variant="outlined"
+              margin="normal"
+            />
+          </Box>
+          {/* <Typography id="filter">Filter by Price</Typography> */}
+          <Box sx={{ marginTop: "40px", justifyContent: "center" }}>
+            <Slider
+              id="slider"
+              getAriaLabel={() => "Temperature range"}
+              color="warning"
+              value={price}
+              onChange={(e, value) => {
+                setPrice(value);
+              }}
+              valueLabelDisplay="auto"
+              min={0}
+              max={10000000}
+              step={50000}
+            />
+          </Box>
         </Box>
       </Box>
       <Box marginTop="50px">
@@ -89,6 +107,7 @@ const AllCarsList = () => {
       </Box>
       <Box>
         <Pagination
+          className="pagination"
           onChange={(event, page) => {
             setCurrentPage(page);
           }}

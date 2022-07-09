@@ -31,7 +31,9 @@ const CarsList = () => {
           justifyContent: "center",
           marginTop: "30px",
         }}>
-        <Typography style={{ color: "gold", fontSize: "50px" }}>
+        <Typography
+          className="inner-page"
+          style={{ color: "gold", fontSize: "50px" }}>
           Premium Cars AG
         </Typography>
         <Typography style={{ color: "white", fontSize: "20px" }}>

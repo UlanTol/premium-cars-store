@@ -1,18 +1,139 @@
 .main1 {
   background-image: url("https://mewallpaper.com/thumbnail/cars/4425-lamborghini-aventador-white-wallpaper-download-free.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
+  object-fit: cover;
+  /* background-size: 100vw; */
+
   color: black;
 }
 .main2 {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Regera_%28light_gradient%29.png/1200px-Regera_%28light_gradient%29.png");
-  background-size: cover;
+  background-size: 100% 100%;
+  object-fit: cover;
 }
 .main3 {
   background-image: url("https://www.birchwood.ca/wp-content/uploads/2019/10/Corvette-2020-e1573078711550.png");
-  background-size: cover;
-}
-.main4 {
-  background-image: url("https://images.pexels.com/photos/8664302/pexels-photo-8664302.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200");
-  /* background-color: black; */
   background-size: 100% 100%;
+  object-fit: cover;
+}
+.footer {
+  margin-top: 300px;
+}
+
+#slider {
+  width: 500px;
+}
+@media only screen and (max-width: 720px) {
+  #cart {
+    margin-top: 90px;
+  }
+  #btn-search {
+    display: none;
+  }
+  .card {
+    width: 100vw;
+  }
+  .pagination {
+    margin-left: 150px;
+  }
+  #search {
+    margin-top: 70px;
+  }
+  .inner-page {
+    margin-top: 40px;
+  }
+  .main3,
+  .main1,
+  .main2 {
+    background-size: 100% 70%;
+    margin-top: 200px;
+    font-size: smaller;
+  }
+  .navbar {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  #sen {
+    display: none;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .card {
+    width: 100vw;
+  }
+  #search {
+    margin-top: 60px;
+  }
+  .inner-page {
+    margin-top: 80px;
+  }
+  .app-info {
+    display: none;
+  }
+  .main1,
+  .main3,
+  .main2 {
+    background-size: 100% 65%;
+    margin-top: 200px;
+    /* margin-bottom: 200px; */
+    font-size: 10px;
+  }
+
+  .main1 button {
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+  }
+  .main3 button {
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+  }
+  .main2 button {
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+  }
+  .main4 {
+    height: 10px;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 100vw;
+  }
+  .main3,
+  .main1,
+  .main2 {
+    background-size: 100% 60%;
+    margin-top: 200px;
+    font-size: 7px;
+  }
+  .navbar {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .main3,
+  .main1,
+  .main2 {
+    background-size: 100% 50%;
+    margin-top: 200px;
+    font-size: 7px;
+  }
+  .navbar {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

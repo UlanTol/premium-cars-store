@@ -27,7 +27,7 @@ export default function Cart() {
   }, []);
 
   return cart ? (
-    <Container>
+    <Container id="cart">
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>

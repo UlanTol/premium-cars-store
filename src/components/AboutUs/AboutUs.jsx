@@ -7,13 +7,15 @@ import SendIcon from "@mui/icons-material/Send";
 const AboutUs = () => {
   const navigate = useNavigate();
   return (
-    <Container sx={{ marginTop: "50px" }}>
+    <Container sx={{ color: "white", marginTop: "50px" }}>
       <Box>
-        <Typography variant="h4">ABOUT US</Typography>
+        <Typography sx={{ color: "white" }} variant="h4">
+          ABOUT US
+        </Typography>
       </Box>
 
       <Box sx={{ marginTop: "30px" }}>
-        <Typography variant="h6">
+        <Typography variant="h6" sx={{ color: "white" }}>
           Sports cars are our passion - and because we would like to share this
           feeling with you, we founded Premium Cars AG in 2013. Our vision is
           clear: to give everyone the opportunity to buy "their" sports car -
