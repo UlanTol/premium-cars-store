@@ -30,7 +30,11 @@ const AddCar = () => {
   return (
     <Container maxWidth="sm">
       <Box display={"flex"} flexDirection={"column"} marginTop={"30px"}>
-        <Typography variant="h4" marginBottom={"20px"} textAlign={"center"}>
+        <Typography
+          variant="h4"
+          color={"gold"}
+          marginBottom={"20px"}
+          textAlign={"center"}>
           Add a Vehicle
         </Typography>
         <TextField

@@ -41,7 +41,11 @@ const EditCar = () => {
   return oneCar ? (
     <Container maxWidth="sm">
       <Box display={"flex"} flexDirection={"column"} marginTop={"30px"}>
-        <Typography variant="h4">Update a Car Info</Typography>
+        <Typography
+          style={{ color: "gold", marginBottom: "20px" }}
+          variant="h4">
+          Update Car Info
+        </Typography>
         <TextField
           id="outlined-basic"
           label="Title"

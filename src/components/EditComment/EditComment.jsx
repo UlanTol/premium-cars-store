@@ -43,7 +43,7 @@ const EditComment = () => {
             marginTop: "30px",
             textAlign: "center",
           }}>
-          <h1>Edit your Comment</h1>
+          <h1 style={{ color: "gold" }}>Edit your Comment</h1>
           <TextField
             value={nick}
             onChange={event => setNick(event.target.value)}
@@ -56,7 +56,7 @@ const EditComment = () => {
             label="comment"
             variant="outlined"
           />
-          <Button onClick={handleSave} variant="outlined">
+          <Button onClick={handleSave} variant="contained" color="warning">
             Save
           </Button>
         </Box>

@@ -37,7 +37,7 @@ const OrderForm = () => {
           alignContent: "center",
         }}
         onSubmit={handleSubmit}>
-        <h1>Your Order Form</h1>
+        <h1 style={{ color: "gold" }}>Your Order Form</h1>
         <div style={{ marginTop: "10px" }}>
           <label>
             Full Name:

@@ -93,7 +93,7 @@ export default function CarCard({ item }) {
             size="small"
             sx={{ color: "magenta" }}
             onClick={() => navigate(`/edit/${item.id}`)}>
-            Update Car Info
+            Update Info
           </Button>
           <Button
             size="small"

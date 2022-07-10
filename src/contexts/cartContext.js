@@ -23,6 +23,7 @@ function reducer(state = INIT_STATE, action) {
 const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
+  //! Create
   function addToCart(car) {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {
@@ -47,7 +48,7 @@ const CartContextProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   }
-
+  //! Read
   function getCart() {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {
@@ -65,7 +66,7 @@ const CartContextProvider = ({ children }) => {
       payload: cart,
     });
   }
-
+  //! Delete
   function deleteFromCart(id) {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {

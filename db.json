@@ -9,7 +9,7 @@
     },
     {
       "title": "Bentley Continental GT",
-      "price": 100500,
+      "price": "100500",
       "description": "Bentley Continental GT Mulliner Coupe Debuts As Luxurious Grand Tourer",
       "image": "https://cdn.motor1.com/images/mgl/wV2RV/s1/bentley-continental-gt-mulliner-coupe.jpg",
       "id": 10
@@ -44,7 +44,7 @@
     },
     {
       "title": "Mercedes-Benz Vision Avtr",
-      "price": 99000,
+      "price": "990000",
       "description": "This concept vehicle embodies the vision of Mercedes-Benz designers ",
       "image": "https://cdnn1.inosmi.ru/img/24660/23/246602311_0:167:2000:1217_1240x0_80_0_0_f13993172e6e9aaead9713b14695624c.jpg",
       "id": 8
@@ -58,7 +58,7 @@
     },
     {
       "title": "Mercedes-Maybach 6 ",
-      "price": "1999990",
+      "price": "199999",
       "description": " Breathtaking proportions and a luxurious haute-couture interior",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg/1200px-Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg",
       "id": 2
