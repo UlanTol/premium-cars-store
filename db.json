@@ -2,49 +2,49 @@
   "cars": [
     {
       "title": "Ferrari LaFerrari",
-      "price": "900000",
+      "price": 900000,
       "description": "The limited edition LaFerrari",
       "image": "https://www.esotericdetail.com/wp-content/uploads/2021/06/ferrari-laferrari-paint-protection-film-esoteric-detail-1080x675.jpg",
       "id": 3
     },
     {
       "title": "Bentley Continental GT",
-      "price": "100500",
+      "price": 100500,
       "description": "Bentley Continental GT Mulliner Coupe Debuts As Luxurious Grand Tourer",
       "image": "https://cdn.motor1.com/images/mgl/wV2RV/s1/bentley-continental-gt-mulliner-coupe.jpg",
       "id": 10
     },
     {
       "title": "FERRARI 488 SPIDER",
-      "price": "2000000",
+      "price": 2000000,
       "description": "The result is the most powerful and innovative Ferrari Spider ever built",
       "image": "https://65e81151f52e248c552b-fe74cd567ea2f1228f846834bd67571e.ssl.cf1.rackcdn.com/Ferrari/Model%20Pages/488%20Spider/ferrari-488-spider-red-driving.jpg",
       "id": 4
     },
     {
       "title": "Lamborghini Huracan",
-      "price": "1500000",
+      "price": 1500000,
       "description": "The Huracán Spyder is the pinnacle of Italian taste and hand craftsmanship",
       "image": "https://www.lambocars.com/wp-content/uploads/2019/02/2019_huracan_evo_spyder_1.jpg",
       "id": 5
     },
     {
       "title": "Lamborghini Urus",
-      "price": "3800000",
+      "price": 3800000,
       "description": "Lamborghini Urus is the first Super Sport Utility Vehicle in the world",
       "image": "https://dvizhok.su/assets/images/resources/21922/urus-azerbaijan.jpg",
       "id": 6
     },
     {
       "title": "Lamborghini Huracán Coupe",
-      "price": "2500000",
+      "price": 2500000,
       "description": "All the power and acceleration of a naturally aspirated V-10 engine ",
       "image": "https://i.pinimg.com/originals/53/bc/0f/53bc0fcd373de7dabd98b8638dd42b59.jpg",
       "id": 7
     },
     {
       "title": "Mercedes-Benz Vision Avtr",
-      "price": "990000",
+      "price": 990000,
       "description": "This concept vehicle embodies the vision of Mercedes-Benz designers ",
       "image": "https://cdnn1.inosmi.ru/img/24660/23/246602311_0:167:2000:1217_1240x0_80_0_0_f13993172e6e9aaead9713b14695624c.jpg",
       "id": 8
@@ -58,7 +58,7 @@
     },
     {
       "title": "Mercedes-Maybach 6 ",
-      "price": "199999",
+      "price": 199999,
       "description": " Breathtaking proportions and a luxurious haute-couture interior",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg/1200px-Vision_Mercedes-Maybach_6_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg",
       "id": 2
@@ -93,7 +93,7 @@
     },
     {
       "title": "Bigatti Veyron",
-      "price": "1778900",
+      "price": 1778900,
       "description": "The Bugatti Veyron EB 16.4 is a mid-engine sports car",
       "image": "https://первыйрай.рф/wp-content/uploads/bugatti-veyron.jpg",
       "id": 15
@@ -135,7 +135,7 @@
     },
     {
       "title": "Tesla",
-      "price": "99900",
+      "price": 99900,
       "description": "Model S Plaid to Pininfirina Battista",
       "image": "https://assets.gqindia.com/photos/60e828e678863c66ba52c6ac/master/pass/Pininfarina-Battista.jpeg",
       "id": 21
