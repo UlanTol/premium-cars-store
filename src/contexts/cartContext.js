@@ -13,7 +13,7 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         cart: action.payload,
-        count: action.payload.cars.length,
+        // count: action.payload.cars.length,
       };
     default:
       return state;
@@ -57,9 +57,9 @@ const CartContextProvider = ({ children }) => {
         totalPrice: 0,
       };
     }
-    cart.totalPrice = cart.cars.reduce((prev, curr) => {
-      return prev + curr.subPrice;
-    }, 0);
+    // cart.totalPrice = cart.cars.reduce((prev, curr) => {
+    //   return prev + curr.subPrice;
+    // }, 0);
 
     dispatch({
       type: "GET_CART",
@@ -104,8 +104,8 @@ const CartContextProvider = ({ children }) => {
         totalPrice: 0,
       };
     }
-    const isCarInCart = cart.cars.some(item => item.item.id === id);
-    return isCarInCart;
+    // const isCarInCart = cart.cars.some(item => item.item.id === id);
+    // return isCarInCart;
   }
 
   return (
